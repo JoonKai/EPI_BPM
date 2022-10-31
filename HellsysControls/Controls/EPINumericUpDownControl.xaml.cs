@@ -1,24 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace EPI_BPM.View.Controls
+namespace HellsysControls.Controls
 {
     /// <summary>
-    /// EPINumericUpDown.xaml에 대한 상호 작용 논리
+    /// EPINumericUpDownControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EPINumericUpDown : UserControl
+    public partial class EPINumericUpDownControl : UserControl
     {
         private int numValue = 0;
 
@@ -31,12 +19,11 @@ namespace EPI_BPM.View.Controls
                 txtNum.Text = value.ToString();
             }
         }
-        public EPINumericUpDown()
+        public EPINumericUpDownControl()
         {
             InitializeComponent();
             txtNum.Text = NumValue.ToString();
         }
-
         private void txtNum_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (txtNum == null)
@@ -60,15 +47,15 @@ namespace EPI_BPM.View.Controls
             }
         }
 
-        private void txtNum_MouseWheel(object sender, MouseWheelEventArgs e)
+        private void txtNum_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
         {
-            if(e.Delta > 0)
+            if (e.Delta > 0)
             {
                 NumValue++;
             }
-            else if(e.Delta < 0)
+            else if (e.Delta < 0)
             {
-                if(NumValue > 0)
+                if (NumValue > 0)
                 {
                     NumValue--;
                 }

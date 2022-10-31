@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:win="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
-             xmlns:epi="clr-namespace:EPI_BPM.View.Controls"
+             xmlns:epi="clr-namespace:HellsysControls.Controls;assembly=HellsysControls"
+             xmlns:ex="clr-namespace:HellsysLibrary.Extensions;assembly=HellsysLibrary"
+             xmlns:en="clr-namespace:EPI_BPM.Model"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1000">
@@ -28,8 +30,8 @@
         <!--#region 카테고리-->
         <Grid Background="White" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -53,17 +55,17 @@
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="현재고" VerticalAlignment="Center" Width="80"/>
                         <TextBlock Text=": " VerticalAlignment="Center"/>
-                        <epi:EPINumericUpDown Width="100" Margin="1 0 0 0"/>
+                        <epi:EPINumericUpDownControl Width="100" Margin="1 0 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="안전재고" VerticalAlignment="Center" Width="80"/>
                         <TextBlock Text=": " VerticalAlignment="Center"/>
-                        <epi:EPINumericUpDown Width="100" Margin="1 0 0 0"/>
+                        <epi:EPINumericUpDownControl Width="100" Margin="1 0 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="기결재번호" VerticalAlignment="Center" Width="80"/>
                         <TextBlock Text=": " VerticalAlignment="Center"/>
-                        <TextBox Width="100" Margin="1"/>
+                        <epi:EPIComboTextBoxControl Width="100"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="업체코드" VerticalAlignment="Center" Width="80"/>
@@ -99,7 +101,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="구매사유"/>
-                        <TextBox Height="50" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="1"/>
+                        <TextBox Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="1"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>

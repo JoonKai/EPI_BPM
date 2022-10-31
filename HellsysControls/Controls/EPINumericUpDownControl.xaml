@@ -1,14 +1,14 @@
-﻿<UserControl x:Class="EPI_BPM.View.Controls.EPINumericUpDown"
+﻿<UserControl x:Class="HellsysControls.Controls.EPINumericUpDownControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EPI_BPM.View.Controls"
+             xmlns:local="clr-namespace:HellsysControls.Controls"
              mc:Ignorable="d">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../Themes/Controls/EPINumericUpDownTheme.xaml"/>
+                <ResourceDictionary Source="../Styles/ControlStyle/EPINumericUpDownStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -17,17 +17,17 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel"  Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="DarkOrange" BorderThickness="0.5" FontSize="11"/>
+        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="0.5" FontSize="11"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Button Height="10" x:Name="cmdUp" Click="cmdUp_Click"  Grid.Row="0" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonUP}">
-                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../../Img/TriangleUp.png"/>
+            <Button Height="10" x:Name="cmdUp" Click="cmdUp_Click" Grid.Row="0" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonUP}">
+                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../Img/TriangleUp.png"/>
             </Button>
-            <Button Height="10" x:Name="cmdDown" Click="cmdDown_Click"  Grid.Row="1" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonDOWN}">
-                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../../Img/TriangleDown.png"/>
+            <Button Height="10" x:Name="cmdDown" Click="cmdDown_Click" Grid.Row="1" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonDOWN}">
+                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../Img/TriangleDown.png"/>
             </Button>
         </Grid>
     </Grid>

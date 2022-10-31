@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EPI_BPM.Helpers
+namespace HellsysLibrary.Helpers
 {
     public class RootHelper
     {
@@ -71,6 +67,5 @@ namespace EPI_BPM.Helpers
             FileInfo file = new FileInfo(RootFile(folderName, fileName));
             if (!file.Exists) file.Create();
         }
-
     }
 }
