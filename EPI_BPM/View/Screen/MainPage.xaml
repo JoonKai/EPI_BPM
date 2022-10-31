@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:win="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             xmlns:epi="clr-namespace:EPI_BPM.View.Controls"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1000">
@@ -15,7 +16,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <!--#region 메뉴바-->
-        <Menu Grid.Row="0">
+        <Menu Grid.Row="0" Background="White">
             <MenuItem Header="파일"/>
             <MenuItem Header="환경설정">
                 <MenuItem x:Name="OptionOpen" Click="OptionOpen_Click" Header="옵션"/>
@@ -52,12 +53,12 @@
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="현재고" VerticalAlignment="Center" Width="80"/>
                         <TextBlock Text=": " VerticalAlignment="Center"/>
-                        <TextBox Width="100" Margin="1"/>
+                        <epi:EPINumericUpDown Width="100" Margin="1 0 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="안전재고" VerticalAlignment="Center" Width="80"/>
                         <TextBlock Text=": " VerticalAlignment="Center"/>
-                        <TextBox Width="100" Margin="1"/>
+                        <epi:EPINumericUpDown Width="100" Margin="1 0 0 0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="2">
                         <TextBlock Text="기결재번호" VerticalAlignment="Center" Width="80"/>
@@ -106,7 +107,7 @@
         <!--#endregion-->
         
         <!--#region 스플리터-->
-        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Margin="1" Background="Black"/>
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Margin="1" Background="#FF538829"/>
         <!--#endregion-->
         <!--#region 데이터그리드뷰-->
         <Grid Grid.Row="3" Background="White">
@@ -115,7 +116,11 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="White">
-                
+                <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
+                    <TextBlock Text="총합계" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text=" : " VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox IsReadOnly="True" Width="100" Margin="5" VerticalContentAlignment="Center"/>
+                </StackPanel>
             </Grid>
             <WindowsFormsHost Grid.Row="1" Margin="5">
                 <win:DataGridView x:Name="ExcelDataGrid" MouseWheel="ExcelDataGrid_MouseWheel"/>

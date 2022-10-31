@@ -59,5 +59,20 @@ namespace EPI_BPM.View.Controls
                 NumValue--;
             }
         }
+
+        private void txtNum_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if(e.Delta > 0)
+            {
+                NumValue++;
+            }
+            else if(e.Delta < 0)
+            {
+                if(NumValue > 0)
+                {
+                    NumValue--;
+                }
+            }
+        }
     }
 }

@@ -91,7 +91,7 @@ namespace EPI_BPM.View.Screen
 
         private void OptionOpen_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            OptionWindow ow = new OptionWindow();
+            Option ow = new Option();
             ow.ShowDialog();
         }
     }

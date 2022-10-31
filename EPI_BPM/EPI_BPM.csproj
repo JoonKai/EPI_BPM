@@ -60,8 +60,10 @@
     </ApplicationDefinition>
     <Compile Include="Helpers\DataGridViewHelper.cs" />
     <Compile Include="Helpers\Helper.cs" />
-    <Compile Include="OptionWindow.xaml.cs">
-      <DependentUpon>OptionWindow.xaml</DependentUpon>
+    <Compile Include="Helpers\IniHelper.cs" />
+    <Compile Include="Helpers\RootHelper.cs" />
+    <Compile Include="Option.xaml.cs">
+      <DependentUpon>Option.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\EPINumericUpDown.xaml.cs">
       <DependentUpon>EPINumericUpDown.xaml</DependentUpon>
@@ -84,7 +86,7 @@
       <DependentUpon>ExToBp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="OptionWindow.xaml">
+    <Page Include="Option.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
