@@ -105,6 +105,10 @@
                     </StackPanel>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Column="2">
+                <epi:EPIComboListboxSingleControl/>
+            </Grid>
+            
         </Grid>
         <!--#endregion-->
         
