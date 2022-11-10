@@ -33,6 +33,12 @@ namespace HellsysControls.Controls
         {
             InitializeComponent();
             InitUI();
+            BitCoin();
+        }
+
+        private void BitCoin()
+        {
+            MessageBox.Show(Helper.EPIJson.UsingJavaScriptSerialize(RootFile));
         }
 
         private void InitUI()
@@ -43,9 +49,9 @@ namespace HellsysControls.Controls
 
             if (fi.Exists)
             {
-                List<string> LoadJson = Helper.EPIJson.LoadedJsonFile<string>(RootFile);
-                lsbList.ItemsSource = LoadJson;
-                cbItems.ItemsSource = LoadJson;
+                List<string> jsonList = Helper.EPIJson.GetJsonFileList<string>(RootFile);
+                lsbList.ItemsSource = jsonList;
+                cbItems.ItemsSource = jsonList;
                 cbItems.SelectedIndex = 2;
             }
 
@@ -53,20 +59,16 @@ namespace HellsysControls.Controls
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            var jsonFIleName = RootFile;
+            var jsonFileName = RootFile;
             List<string> items = GetListViewItems();
             var result = AddItem(items);
 
             lsbList.ItemsSource = result;
             lsbList.Items.Refresh();
-            List<string> list = Helper.EPIJson.GetnerateList(result);
-            Helper.EPIJson.SaveToJsonFIle(list, jsonFIleName);
+            Helper.EPIJson.SaveToJsonFile(result, jsonFileName);
 
             txbText.Text = "";
             cbItems.ItemsSource = result;
-
-
-
         }
 
 
@@ -105,8 +107,7 @@ namespace HellsysControls.Controls
                 lsbList.Items.Clear();
                 lsbList.ItemsSource = Items;
                 cbItems.ItemsSource = Items;
-                List<string> list = Helper.EPIJson.GetnerateList(Items);
-                Helper.EPIJson.SaveToJsonFIle(list, RootFile);
+                Helper.EPIJson.SaveToJsonFile(Items, RootFile);
             }
         }
     }
