@@ -7,13 +7,6 @@
              xmlns:option="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="600">
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../Themes/Controls/ControlsTheme.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -21,8 +14,8 @@
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Margin="5 5 5 0" Width="60" Height="20" Content="저장" Style="{StaticResource ButtonStyle1}"/>
-                <Button Margin="5 5 5 0" Width="60" Height="20" Content="취소" Style="{StaticResource ButtonStyle1}"/>
+                <Button Margin="5 5 5 0" Width="60" Height="20" Content="저장" />
+                <Button Margin="5 5 5 0" Width="60" Height="20" Content="취소" />
             </StackPanel>
         </Grid>
         <TabControl Grid.Row="1" Grid.Column="0" Margin="5">

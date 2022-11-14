@@ -106,7 +106,8 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">
-                <epi:EPIComboListboxSingleControl/>
+                <epi:EPIComboListboxSingleControl Title="CostCenter" FolName="JRCP" FilName="CostCenterList"/>
+                <epi:EPIComboListboxSingleControl Title="CostCenter" FolName="JRCP" FilName="CostCenterList"/>
             </Grid>
             
         </Grid>

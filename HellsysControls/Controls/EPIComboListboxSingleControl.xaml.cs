@@ -23,26 +23,22 @@ namespace HellsysControls.Controls
     /// </summary>
     public partial class EPIComboListboxSingleControl : UserControl
     {
-        public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + "JRCP" + "\\"; }
-        public string RootFile { get => @RootFolder + "\\" + "PL" + ".Json"; }
+        public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + FolName + "\\"; }
+        public string RootFile { get => @RootFolder + "\\" + FilName + ".Json"; }
 
+        public string Title { get; set; }
         public string FolName { get; set; }
         public string FilName { get; set; }
+
 
         public EPIComboListboxSingleControl()
         {
             InitializeComponent();
-            InitUI();
-            BitCoin();
+            DataContext = this;
         }
-
-        private void BitCoin()
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Helper.EPIJson.UsingJavaScriptSerialize(RootFile));
-        }
-
-        private void InitUI()
-        {
+            
             DirectoryInfo di = new DirectoryInfo(RootFolder);
             if (!di.Exists) di.Create();
             FileInfo fi = new FileInfo(RootFile);
@@ -54,9 +50,7 @@ namespace HellsysControls.Controls
                 cbItems.ItemsSource = jsonList;
                 cbItems.SelectedIndex = 2;
             }
-
         }
-
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             var jsonFileName = RootFile;
@@ -110,5 +104,6 @@ namespace HellsysControls.Controls
                 Helper.EPIJson.SaveToJsonFile(Items, RootFile);
             }
         }
+
     }
 }
