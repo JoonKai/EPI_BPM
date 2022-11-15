@@ -12,12 +12,12 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid MinHeight="20" MinWidth="100">
+    <Grid MinHeight="20" MinWidth="120">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="0.5" FontSize="11"/>
+        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="Gray" BorderThickness="0.5" FontSize="11"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
