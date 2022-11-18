@@ -61,7 +61,10 @@
     <Compile Include="Helpers\IniHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="Helpers\RootHelper.cs" />
+    <Compile Include="Maths\NumericPoint.cs" />
+    <Compile Include="Maths\NumericPointT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
