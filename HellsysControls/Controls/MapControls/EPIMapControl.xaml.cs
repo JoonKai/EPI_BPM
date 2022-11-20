@@ -13,21 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HellsysControls.Controls
+namespace HellsysControls.Controls.MapControls
 {
     /// <summary>
-    /// EPIComboTextBoxControl.xaml에 대한 상호 작용 논리
+    /// EPIMapControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EPIComboTextBoxControl : UserControl
+    public partial class EPIMapControl : UserControl
     {
-        public EPIComboTextBoxControl()
+        public double EdgeExclusion { get; set; }
+        public double WaferSize { get; set; }
+        public EPIMapControl()
         {
             InitializeComponent();
         }
-    }
-    public enum currency
-    {
-        K,
-        U
     }
 }

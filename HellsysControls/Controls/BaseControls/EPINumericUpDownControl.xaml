@@ -1,14 +1,14 @@
-﻿<UserControl x:Class="HellsysControls.Controls.EPINumericUpDownControl"
+﻿<UserControl x:Class="HellsysControls.Controls.BaseControls.EPINumericUpDownControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:HellsysControls.Controls"
+             xmlns:local="clr-namespace:HellsysControls.Controls.BaseControls"
              mc:Ignorable="d">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Styles/ControlStyle/EPINumericUpDownStyle.xaml"/>
+                <ResourceDictionary Source="../../Styles/ControlStyle/EPINumericUpDownStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
