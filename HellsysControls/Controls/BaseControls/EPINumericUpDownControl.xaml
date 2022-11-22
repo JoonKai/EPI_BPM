@@ -24,10 +24,10 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Button Height="10" x:Name="cmdUp" Click="cmdUp_Click" Grid.Row="0" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonUP}">
-                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../Img/TriangleUp.png"/>
+                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../../Img/TriangleUp.png"/>
             </Button>
             <Button Height="10" x:Name="cmdDown" Click="cmdDown_Click" Grid.Row="1" Margin="-1 -0.5 0 -0.5" Style="{StaticResource ButtonDOWN}">
-                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../Img/TriangleDown.png"/>
+                <Image Height="7" Width="7" VerticalAlignment="Center" Source="../../Img/TriangleDown.png"/>
             </Button>
         </Grid>
     </Grid>

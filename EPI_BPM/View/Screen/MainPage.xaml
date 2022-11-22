@@ -9,10 +9,11 @@
              xmlns:en="clr-namespace:EPI_BPM.Model"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1000" FontSize="11">
+             d:DesignHeight="700" d:DesignWidth="1000" FontSize="12">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="5"/>
             <RowDefinition Height="2*"/>
@@ -26,9 +27,13 @@
             <MenuItem Header="기타"/>
         </Menu>
         <!--#endregion-->
-        
+        <!--#region 버튼 공간-->
+        <Grid Grid.Row="1" Background="White">
+            
+        </Grid>
+        <!--#endregion-->
         <!--#region 카테고리-->
-        <Grid Background="White" Grid.Row="1">
+        <Grid Background="White" Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.2*"/>
@@ -46,8 +51,8 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <!--목록선택-->
-            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" Margin="5">
+            <!--#region 기본 항목 작성-->
+            <Grid HorizontalAlignment="Left" MaxWidth="250" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" Margin="5">
                 <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
                         <StackPanel Orientation="Horizontal" Margin="2">
@@ -78,7 +83,7 @@
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="기결재번호" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIComboTextBoxControl Margin="1 0 0 0" Height="20" Width="120"/>
+                            <TextBox Height="20" Width="120" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="업체코드" VerticalAlignment="Center" Width="80"/>
@@ -103,18 +108,25 @@
                     </StackPanel>
                 </Border>
             </Grid>
+            <!--#endregion-->
+            <!--#region 주요 항목 작성-->
             <Grid Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="5">
                 <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
                         <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="단가" VerticalAlignment="Center" Width="80"/>
+                            <TextBlock Text="구매유형" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
                             <TextBox Height="20" Width="120" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
+                            <TextBlock Text="단가" VerticalAlignment="Center" Width="80"/>
+                            <TextBlock Text=": " VerticalAlignment="Center"/>
+                            <epi:EPIComboTextBoxControl Margin="1 0 0 0" Height="20" Width="120"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="수량" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="120" Margin="1"/>
+                            <epi:EPINumericUpDownControl Height="20" Width="120" Margin="1 0 0 0"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="합계" VerticalAlignment="Center" Width="80"/>
@@ -124,6 +136,8 @@
                     </StackPanel>
                 </Border>
             </Grid>
+            <!--#endregion-->
+            <!--#region 사유 항목 작성-->
             <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="5" Grid.ColumnSpan="2" Margin="5">
                 <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
@@ -142,17 +156,20 @@
                     </StackPanel>
                 </Border>
             </Grid>
+            <!--#endregion-->
             <Grid Grid.Column="7" Grid.Row="0" Grid.RowSpan="3">
                 <epi:EPIComboListboxSingleControl Title="CostCenter" FolName="JRCP" FilName="CostCenterList"/>
             </Grid>
+            <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2">
+                <epi:EPISearchComboListBoxDualControl Title="손준석테스트" FolName="son" FilName="sskv"/>
+            </Grid>
         </Grid>
         <!--#endregion-->
-        
         <!--#region 스플리터-->
-        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Margin="1" Background="#FF538829"/>
+        <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Margin="1" Background="#FF538829"/>
         <!--#endregion-->
         <!--#region 데이터그리드뷰-->
-        <Grid Grid.Row="3" Background="White">
+        <Grid Grid.Row="4" Background="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>

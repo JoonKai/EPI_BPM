@@ -1,17 +1,29 @@
 ﻿using HellsysLibrary.Helpers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace HellsysControls.Controls.BaseControls
 {
     /// <summary>
-    /// EPIComboListboxSingleControl.xaml에 대한 상호 작용 논리
+    /// EPISearchComboListBoxDualControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EPIComboListboxSingleControl : UserControl
+    public partial class EPISearchComboListBoxDualControl : UserControl
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + FolName + "\\"; }
         public string RootFile { get => @RootFolder + "\\" + FilName + ".Json"; }
 
@@ -19,15 +31,18 @@ namespace HellsysControls.Controls.BaseControls
         public string FolName { get; set; }
         public string FilName { get; set; }
 
+        
 
-        public EPIComboListboxSingleControl()
+        public EPISearchComboListBoxDualControl()
         {
             InitializeComponent();
             DataContext = this;
         }
+
+
+        #region 이벤트
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            
             DirectoryInfo di = new DirectoryInfo(RootFolder);
             if (!di.Exists) di.Create();
             FileInfo fi = new FileInfo(RootFile);
@@ -37,10 +52,8 @@ namespace HellsysControls.Controls.BaseControls
                 List<string> jsonList = Helper.EPIJson.GetJsonFileList<string>(RootFile);
                 lsbList.ItemsSource = jsonList;
                 cbItems.ItemsSource = jsonList;
-                cbItems.SelectedIndex = 2;
             }
         }
-        #region 이벤트
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             var jsonFileName = RootFile;
@@ -54,10 +67,11 @@ namespace HellsysControls.Controls.BaseControls
             txbText.Text = "";
             cbItems.ItemsSource = result;
         }
+
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             List<string> Items = GetListViewItems();
-            if(lsbList.SelectedIndex >= 0)
+            if (lsbList.SelectedIndex >= 0)
             {
                 Items.RemoveAt(lsbList.SelectedIndex);
                 lsbList.ItemsSource = null;
@@ -71,7 +85,7 @@ namespace HellsysControls.Controls.BaseControls
 
         private List<string> AddItem(List<string> _items)
         {
-            if(txbText.Text != "" && !_items.Contains(txbText.Text))
+            if (txbText.Text != "" && !_items.Contains(txbText.Text))
             {
                 _items.Add(txbText.Text.ToUpper().Trim().ToString());
             }
@@ -80,7 +94,7 @@ namespace HellsysControls.Controls.BaseControls
         private List<string> GetListViewItems()
         {
             var IDummy = new List<string>();
-            if(lsbList.Items.Count == 0)
+            if (lsbList.Items.Count == 0)
             {
                 return IDummy;
             }
