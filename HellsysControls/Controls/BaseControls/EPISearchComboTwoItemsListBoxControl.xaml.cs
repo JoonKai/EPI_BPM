@@ -21,7 +21,7 @@ namespace HellsysControls.Controls.BaseControls
     /// <summary>
     /// EPISearchComboListBoxDualControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EPISearchComboListBoxDualControl : UserControl
+    public partial class EPISearchComboTwoItemsListBoxControl : UserControl
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + FolName + "\\"; }
@@ -31,9 +31,10 @@ namespace HellsysControls.Controls.BaseControls
         public string FolName { get; set; }
         public string FilName { get; set; }
 
+        private TextBox mTxtBox = null;
         
 
-        public EPISearchComboListBoxDualControl()
+        public EPISearchComboTwoItemsListBoxControl()
         {
             InitializeComponent();
             DataContext = this;
@@ -43,6 +44,9 @@ namespace HellsysControls.Controls.BaseControls
         #region 이벤트
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            //this.mTxtBox = cbItems.Template.FindName("PART_EditableTextBox", cbItems) as TextBox;
+
+
             DirectoryInfo di = new DirectoryInfo(RootFolder);
             if (!di.Exists) di.Create();
             FileInfo fi = new FileInfo(RootFile);
@@ -107,5 +111,48 @@ namespace HellsysControls.Controls.BaseControls
             }
             return IDummy;
         }
+
+        //private void cbItems_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //    cbItems.Items.Filter -= this.FilterPredicate;
+
+        //    if((e.Key ==Key.Enter)||(e.Key == Key.Tab)||(e.Key == Key.Return))
+        //    {
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        cbItems.IsDropDownOpen = true;
+        //        cbItems.Items.Filter += this.FilterPredicate;
+        //    }
+        //}
+        //private bool FilterPredicate(object obj)
+        //{
+        //    string sValue = string.Empty;
+
+        //    if(obj is string)
+        //        sValue= obj.ToString();
+        //    else if(obj is ComboBoxItem)
+        //    {
+        //        sValue = (obj as ComboBoxItem).Content.ToString();
+        //    }
+        //    else
+        //    {
+        //        System.Reflection.PropertyInfo info = obj.GetType().GetProperty(cbItems.DisplayMemberPath);
+        //        if(info != null )
+        //        {
+        //            object oValue = info.GetValue(obj, null);
+        //            if(oValue != null)
+        //            {
+        //                sValue= oValue.ToString();
+        //            }
+        //        }
+        //    }
+
+        //    if (!string.IsNullOrEmpty(sValue) && sValue.Contains(this.mTxtBox.Text))
+        //        return true;
+        //    else
+        //        return false;
+        //}
     }
 }

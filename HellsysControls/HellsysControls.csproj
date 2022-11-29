@@ -49,6 +49,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorConverters\IColorConverter.cs" />
     <Compile Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml.cs">
       <DependentUpon>EPIComboListboxSingleControl.xaml</DependentUpon>
     </Compile>
@@ -58,13 +59,14 @@
     <Compile Include="Controls\BaseControls\EPINumericUpDownControl.xaml.cs">
       <DependentUpon>EPINumericUpDownControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPISearchComboListBoxDualControl.xaml.cs">
-      <DependentUpon>EPISearchComboListBoxDualControl.xaml</DependentUpon>
+    <Compile Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
+      <DependentUpon>EPISearchComboTwoItemsListBoxControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MapControls\ConvertMapToImage.cs" />
     <Compile Include="Controls\MapControls\EPIMapControl.xaml.cs">
       <DependentUpon>EPIMapControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MapControls\MapRange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -100,7 +102,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPISearchComboListBoxDualControl.xaml">
+    <Page Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +133,5 @@
     <Resource Include="Img\TriangleDown.png" />
     <Resource Include="Img\TriangleUp.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

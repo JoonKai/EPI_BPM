@@ -65,6 +65,8 @@
     <Compile Include="Helpers\RootHelper.cs" />
     <Compile Include="Maths\NumericPoint.cs" />
     <Compile Include="Maths\NumericPointT.cs" />
+    <Compile Include="Maths\NumericRange.cs" />
+    <Compile Include="Maths\NumericRangeT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
