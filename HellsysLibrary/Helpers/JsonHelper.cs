@@ -9,21 +9,20 @@ namespace HellsysLibrary.Helpers
 {
     public class JsonHelper
     {
-        public string SaveToJsonFile(List<string> list, string jsonFileName)
+        /// <summary>
+        /// 리스트를 Json 파일로 저장
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="jsonFileName"></param>
+        /// <returns></returns>
+        public void SaveToJsonFile<T>(List<T> list, string jsonFileName)
         {
             string jsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
             File.WriteAllText(jsonFileName, jsonString);
-
-            return jsonString;
         }
-        //public string UsingJavaScriptSerialize(string JsonFileName)
-        //{
-        //    JavaScriptSerializer jSer = new JavaScriptSerializer();
-        //    string json = JsonConvert.DeserializeObject<(JsonFileName);
-        //    return jSer.Serialize(json);
-        //}
         /// <summary>
-        /// JsonFile을 열어서 저장된 Json 항목을 가져온다.
+        /// Json파일을 열어서 List로 반환
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="jsonFileName"></param>

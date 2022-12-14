@@ -163,6 +163,11 @@
             <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3">
                 <epi:EPIComboListboxSingleControl Title="CostCenter" FolName="JRCP" FilName="CostCenterList"/>
             </Grid>
+            <Grid Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3">
+                <epi:EPIComboListboxTwoColumnControl Title="CostCenter"
+                                                     ListviewColTitle1="업체코드"
+                                                     ListviewColTitle2="업체명" FolName="JRCP" FilName="Cost"/>
+            </Grid>
             <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2">
                 <!--<epi:EPISearchComboTwoItemsListBoxControl Title="손준석테스트" FolName="son" FilName="sskv"/>-->
             </Grid>

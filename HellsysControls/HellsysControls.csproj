@@ -52,6 +52,9 @@
     <Compile Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml.cs">
       <DependentUpon>EPIComboListboxSingleControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\EPIComboListboxTwoColumnControl.xaml.cs">
+      <DependentUpon>EPIComboListboxTwoColumnControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPIComboTextBoxControl.xaml.cs">
       <DependentUpon>EPIComboTextBoxControl.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\EPIComboListboxTwoColumnControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
