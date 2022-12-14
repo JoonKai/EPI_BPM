@@ -10,7 +10,7 @@ namespace HellsysControls.Controls.BaseControls
     /// <summary>
     /// EPIComboListboxTwoColumnControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EPIComboListboxTwoColumnControl : UserControl
+    public partial class EPIComboListViewTwoColumnControl : UserControl
     {
         public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + FolName + "\\"; }
         public string RootFile { get => @RootFolder + "\\" + FilName + ".Json"; }
@@ -22,7 +22,7 @@ namespace HellsysControls.Controls.BaseControls
         public string FilName { get; set; }
 
         public List<UserItems> Uitems = new List<UserItems>();
-        public EPIComboListboxTwoColumnControl()
+        public EPIComboListViewTwoColumnControl()
         {
             InitializeComponent();
             DataContext= this;
@@ -36,19 +36,17 @@ namespace HellsysControls.Controls.BaseControls
 
             if (fi.Exists)
             {
-                List<string> jsonList = Helper.EPIJson.GetJsonFileList<string>(RootFile);
+                List<UserItems> jsonList = Helper.EPIJson.GetJsonFileList<UserItems>(RootFile);
                 lsvList.ItemsSource = jsonList;
                 cbItems.ItemsSource = jsonList;
-                cbItems.SelectedIndex = 2;
+                cbItems.SelectedIndex = 0;
             }
         }
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             if (File.Exists(RootFile))
-            {
                 Uitems = Helper.EPIJson.GetJsonFileList<UserItems>(RootFile);
-                Uitems.Add(new UserItems { Item1 = txbText1.Text.ToString(),Item2= txbText2.Text.ToString()});
-            }
+            Uitems.Add(new UserItems { Item1 = txbText1.Text.ToString(), Item2 = txbText2.Text.ToString() });
             lsvList.ItemsSource = Uitems;
             cbItems.ItemsSource = Uitems;
             Helper.EPIJson.SaveToJsonFile(Uitems, RootFile);
