@@ -64,6 +64,11 @@
     <Compile Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
       <DependentUpon>EPISearchComboTwoItemsListBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml.cs">
+      <DependentUpon>EPIWaterMarkTextboxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Converters\ValidatingBorderBrushConverter.cs" />
+    <Compile Include="Controls\Converters\ValidatingBorderThicknessConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

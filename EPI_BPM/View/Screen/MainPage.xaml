@@ -52,17 +52,17 @@
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="No" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Background="White" Width="100" Height="20" Margin="1" WaterMarkText="기본적용" WaterMarkTextColor="Orange"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="요청팀" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="코스트센터" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="현재고" VerticalAlignment="Center" Width="80"/>
@@ -77,27 +77,27 @@
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="기결재번호" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="업체코드" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="업체명" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="연락처" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="자재코드" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="100" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>
@@ -110,7 +110,7 @@
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="구매유형" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="120" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="120" Margin="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="단가" VerticalAlignment="Center" Width="80"/>
@@ -125,7 +125,7 @@
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <TextBlock Text="합계" VerticalAlignment="Center" Width="80"/>
                             <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <TextBox Height="20" Width="120" Margin="1"/>
+                            <epi:EPIWaterMarkTextboxControl Height="20" Width="120" Margin="1"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>
