@@ -6,40 +6,34 @@
              xmlns:local="clr-namespace:HellsysControls.Controls.BaseControls"
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/Colors/ControlColors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid Margin="2">
-        <Border BorderBrush="Gainsboro" BorderThickness="1" CornerRadius="3">
+        <Border BorderBrush="{StaticResource BorderBrushColor}" BorderThickness="1" CornerRadius="1">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20"/>
-                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="17"/>
+                    <RowDefinition Height="25"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Background="Transparent" Text="{Binding Title}" TextAlignment="Center" FontSize="12" Margin="2"/>
-                <ComboBox x:Name="cbItems" Grid.Row="1" Margin="2"/>
+                <TextBlock Background="{StaticResource ColorPrimary}" Text="{Binding Title}" TextAlignment="Center" FontSize="12" Margin="1"/>
+                <ComboBox x:Name="cbItems" Grid.Row="1" Margin="1"/>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="0.6*"/>
-                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="{Binding RListboxWidth}"/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Grid.ColumnSpan="2">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                        </Grid.RowDefinitions>
-                        <TextBox x:Name="txbText" Height="25" Margin="2" Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
-                        <Button x:Name="btnAdd" Click="btnAdd_Click" Height="25" Content="추가" Margin="2" Grid.Column="0" Grid.Row="1"/>
-                        <Button x:Name="btnDelete" Click="btnDelete_Click" Height="25" Content="삭제" Margin="2" Grid.Column="0" Grid.Row="2"/>
-                    </Grid>
-                    <ListBox x:Name="lsbList" Margin="2" Grid.Column="2" Grid.Row="0" BorderBrush="Black" BorderThickness="1"/>
+                    <StackPanel Grid.Column="0">
+                        <TextBox x:Name="txbText" Height="20" Margin="1" BorderBrush="Black" BorderThickness="1"/>
+                        <Button x:Name="btnAdd" Click="btnAdd_Click" Height="23" Content="추가" Margin="1"/>
+                        <Button x:Name="btnDelete" Click="btnDelete_Click" Height="23" Content="삭제" Margin="1"/>
+                    </StackPanel>
+                    <ListBox x:Name="lsbList" Margin="1 1 1 0" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/>
                 </Grid>
             </Grid>
         </Border>

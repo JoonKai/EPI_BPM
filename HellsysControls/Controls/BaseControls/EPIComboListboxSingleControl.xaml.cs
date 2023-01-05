@@ -20,6 +20,16 @@ namespace HellsysControls.Controls.BaseControls
         public string FilName { get; set; }
 
 
+        public double RListboxWidth
+        {
+            get { return (double)GetValue(RListboxWidthProperty); }
+            set { SetValue(RListboxWidthProperty, value); }
+        }
+
+        public static readonly DependencyProperty RListboxWidthProperty = DependencyProperty.Register("RListboxWidth", typeof(double), typeof(EPIComboListboxSingleControl), new PropertyMetadata(98.0));
+
+
+
         public EPIComboListboxSingleControl()
         {
             InitializeComponent();
