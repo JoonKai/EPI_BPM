@@ -9,7 +9,16 @@
              xmlns:en="clr-namespace:EPI_BPM.Model"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1000" FontSize="12">
+             d:DesignHeight="700" d:DesignWidth="1000" FontSize="14" x:Name="root">
+    <UserControl.Resources>
+        <Style x:Key="BaseControl" TargetType="{x:Type FrameworkElement}">
+            <Setter Property="Control.FontSize" Value="{Binding FontSize, ElementName=root}"/>
+            <Setter Property="Control.FontFamily" Value="{Binding FontFamily, ElementName=root}"/>
+        </Style>
+        <Style TargetType="{x:Type Grid}" BasedOn="{StaticResource BaseControl}">
+            
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -49,56 +58,34 @@
             <Grid HorizontalAlignment="Left" MaxWidth="250" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Margin="5">
                 <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="No" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Background="White" Width="100" Height="20" Margin="1" WaterMarkText="기본적용" WaterMarkTextColor="Orange"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="요청팀" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="코스트센터" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="현재고" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPINumericUpDownControl Height="20" Width="100" Margin="1 0 0 0"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="안전재고" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPINumericUpDownControl Height="20" Width="100" Margin="1 0 0 0"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="기결재번호" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="업체코드" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="업체명" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="연락처" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="2">
-                            <TextBlock Text="자재코드" VerticalAlignment="Center" Width="80"/>
-                            <TextBlock Text=": " VerticalAlignment="Center"/>
-                            <epi:EPIWaterMarkTextboxControl Height="20" Width="100" Margin="1"/>
-                        </StackPanel>
+                        <epi:EPITextItemControl THeaderText="NO"/>
+                        <epi:EPITextItemControl THeaderText="요청팀"/>
+                        <epi:EPITextItemControl THeaderText="코스트센터"/>
+                        <epi:EPITextNumericUpDownItemControl NHeaderText="현재고"/>
+                        <epi:EPITextItemControl THeaderText="안전재고"/>
+                        <epi:EPITextItemControl THeaderText="연간구매수량"/>
+                        <epi:EPITextItemControl THeaderText="기결재번호"/>
+                        <epi:EPITextItemControl THeaderText="구매사유"/>
+                        <epi:EPITextItemControl THeaderText="구분"/>
+                        <epi:EPITextItemControl THeaderText="업체코드"/>
+                        <epi:EPITextItemControl THeaderText="업체명"/>
+                        <epi:EPITextItemControl THeaderText="연락처"/>
+                        <epi:EPITextItemControl THeaderText="자재코드"/>
+                        <epi:EPITextItemControl THeaderText="제조사"/>
+                        <epi:EPITextItemControl THeaderText="품명"/>
+                        <epi:EPITextItemControl THeaderText="규격"/>
+                        <epi:EPITextNumericUpDownItemControl NHeaderText="요청수량"/>
+                        <epi:EPITextItemControl THeaderText="초기단가"/>
+                        <epi:EPITextItemControl THeaderText="합계"/>
+                        <epi:EPITextItemControl THeaderText="공정명"/>
+                        <epi:EPITextItemControl THeaderText="적용설비"/>
+                        <epi:EPITextItemControl THeaderText="담당자"/>
+                        <epi:EPITextItemControl THeaderText="견적서"/>
+                        <epi:EPITextItemControl THeaderText="수리보고서"/>
+                        <epi:EPITextItemControl THeaderText="비교단가"/>
+                        <epi:EPITextItemControl THeaderText="비교견적서"/>
+                        <epi:EPITextItemControl THeaderText="비고"/>
+
                     </StackPanel>
                 </Border>
             </Grid>

@@ -64,6 +64,12 @@
     <Compile Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
       <DependentUpon>EPISearchComboTwoItemsListBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\EPITextItemControl.xaml.cs">
+      <DependentUpon>EPITextItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseControls\EPITextNumericUpDownItemControl.xaml.cs">
+      <DependentUpon>EPITextNumericUpDownItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml.cs">
       <DependentUpon>EPIWaterMarkTextboxControl.xaml</DependentUpon>
     </Compile>
@@ -109,6 +115,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\EPITextItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\EPITextNumericUpDownItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -34,6 +34,8 @@ namespace HellsysControls.Controls.BaseControls
         #endregion
 
         #region Public Properties
+
+
         public new Brush BorderBrush
         {
             get { return (Brush)GetValue(BorderBrushProperty); }
@@ -76,20 +78,25 @@ namespace HellsysControls.Controls.BaseControls
         #region Event
         private void baseTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Console.WriteLine("21");
             int dummy;
             if(baseTextbox.Text != "" && Int32.TryParse(baseTextbox.Text.ToString(),out dummy))
             {
                 Validating = false;
-                Console.WriteLine("31");
             }
             else
             {
                 Validating = true;
-                Console.WriteLine("41");
 
             }
         }
         #endregion
+    }
+    public enum TypeProperty
+    {
+        None,
+        String,
+        Int,
+        Double,
+        Flot
     }
 }
