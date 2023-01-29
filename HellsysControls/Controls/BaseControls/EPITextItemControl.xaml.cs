@@ -21,15 +21,25 @@ namespace HellsysControls.Controls.BaseControls
     public partial class EPITextItemControl : UserControl
     {
         #region Dependency Properties
-
+        public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextItemControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty THeaderWidthProperty = DependencyProperty.Register("THeaderWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
+        public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
 
         public string THeaderText
         {
             get { return (string)GetValue(THeaderTextProperty); }
             set { SetValue(THeaderTextProperty, value); }
         }
-        public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextItemControl), new PropertyMetadata(null));
-
+        public int THeaderWidth
+        {
+            get { return (int)GetValue(THeaderWidthProperty); }
+            set { SetValue(THeaderWidthProperty, value); }
+        }
+        public int TBWidth
+        {
+            get { return (int)GetValue(TBWidthProperty); }
+            set { SetValue(TBWidthProperty, value); }
+        }
 
         #endregion
         public EPITextItemControl()

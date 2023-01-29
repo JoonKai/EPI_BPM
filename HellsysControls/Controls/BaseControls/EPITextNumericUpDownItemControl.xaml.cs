@@ -22,13 +22,27 @@ namespace HellsysControls.Controls.BaseControls
     {
         #region Dependency Properties
 
+        public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(null));
+        public static readonly DependencyProperty THeaderWidthProperty = DependencyProperty.Register("THeaderWidth", typeof(int), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(50));
+        public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(50));
 
-        public string NHeaderText
+        public string THeaderText
         {
-            get { return (string)GetValue(NHeaderTextProperty); }
-            set { SetValue(NHeaderTextProperty, value); }
+            get { return (string)GetValue(THeaderTextProperty); }
+            set { SetValue(THeaderTextProperty, value); }
         }
-        public static readonly DependencyProperty NHeaderTextProperty = DependencyProperty.Register("NHeaderText", typeof(string), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(null));
+        public int THeaderWidth
+        {
+            get { return (int)GetValue(THeaderWidthProperty); }
+            set { SetValue(THeaderWidthProperty, value); }
+        }
+        public int TBWidth
+        {
+            get { return (int)GetValue(TBWidthProperty); }
+            set { SetValue(TBWidthProperty, value); }
+        }
+
+
 
 
         #endregion

@@ -4,23 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HellsysControls.Controls.BaseControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="23" d:DesignWidth="200" x:Name="root">
+             mc:Ignorable="d" x:Name="root">
     <UserControl.Resources>
-        <Style TargetType="{x:Type TextBlock}">
+        <Style TargetType="{x:Type TextBlock}" x:Key="THeader">
             <Setter Property="Margin" Value="1 0 0 0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Text" Value="{Binding THeaderText, ElementName=root}"/>
+            <Setter Property="Width" Value="{Binding THeaderWidth, ElementName=root}"/>
         </Style>
         <Style TargetType="{x:Type local:EPIWaterMarkTextboxControl}">
             <Setter Property="Height" Value="20"/>
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
             <Setter Property="Margin" Value="1"/>
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal" Margin="2">
-        <TextBlock Width="80" />
-        <TextBlock Text=": "/>
+        <TextBlock Style="{DynamicResource THeader}" />
+        <TextBlock Text=":" Margin="5,0"/>
         <local:EPIWaterMarkTextboxControl/>
     </StackPanel>
 </UserControl>
