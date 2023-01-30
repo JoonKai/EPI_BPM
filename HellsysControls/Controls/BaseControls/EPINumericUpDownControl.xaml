@@ -62,12 +62,12 @@
         </Style>
         <!--#endregion-->
     </UserControl.Resources>
-    <Grid MinHeight="20" MinWidth="100">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="11" Style="{StaticResource TextContent}"/>
+        <TextBox x:Name="txtNum" TextChanged="txtNum_TextChanged" MouseWheel="txtNum_MouseWheel" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Style="{StaticResource TextContent}"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>

@@ -9,7 +9,7 @@
              xmlns:en="clr-namespace:EPI_BPM.Model"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1000" FontSize="14" x:Name="root">
+             d:DesignHeight="700" d:DesignWidth="1000" FontSize="12" x:Name="root">
     <UserControl.Resources>
         <Style x:Key="BaseControl" TargetType="{x:Type FrameworkElement}">
             <Setter Property="Control.FontSize" Value="{Binding FontSize, ElementName=root}"/>
@@ -17,6 +17,9 @@
         </Style>
         <Style TargetType="{x:Type Grid}" BasedOn="{StaticResource BaseControl}">
             
+        </Style>
+        <Style TargetType="{x:Type epi:EPITextItemControl}">
+            <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -38,33 +41,21 @@
         <!--#region 카테고리-->
         <Grid Background="White" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="230"/>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
             <!--#region 기본 항목 작성-->
-            <Grid HorizontalAlignment="Left" MaxWidth="250" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Margin="5">
-                <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+            <Grid HorizontalAlignment="Left" Grid.Column="0" Margin="5">
+                <Border BorderThickness="1" BorderBrush="Black" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
-                        <epi:EPITextItemControl THeaderText="NO" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="기결재번호" THeaderWidth="70" TBWidth="100"/>
+                        <epi:EPITextItemControl THeaderText="NO" THeaderWidth="70" TBWidth="50"/>
+                        <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100" ItemText="EPI설비기술LT"/>
+                        <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100" ItemText="252203"/>
+                        <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
+                        <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
+                        <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
+                        <epi:EPITextItemControl THeaderText="기결재번호" THeaderWidth="70" TBWidth="50"/>
                         <epi:EPITextItemControl THeaderText="구매사유" THeaderWidth="70" TBWidth="100"/>
                         <epi:EPITextItemControl THeaderText="구분" THeaderWidth="70" TBWidth="100"/>
                         <epi:EPITextItemControl THeaderText="업체코드" THeaderWidth="70" TBWidth="100"/>
@@ -85,7 +76,6 @@
                         <epi:EPITextItemControl THeaderText="비교단가" THeaderWidth="70" TBWidth="100"/>
                         <epi:EPITextItemControl THeaderText="비교견적서" THeaderWidth="70" TBWidth="100"/>
                         <epi:EPITextItemControl THeaderText="비고" THeaderWidth="70" TBWidth="100"/>
-
                     </StackPanel>
                 </Border>
             </Grid>

@@ -21,6 +21,6 @@
     <StackPanel Orientation="Horizontal" Margin="2">
         <TextBlock Style="{DynamicResource THeader}" />
         <TextBlock Text=":" Margin="5,0"/>
-        <local:EPIWaterMarkTextboxControl/>
+        <local:EPIWaterMarkTextboxControl Text="{Binding ItemText, ElementName=root}"/>
     </StackPanel>
 </UserControl>
