@@ -12,6 +12,6 @@
         </Style>
     </UserControl.Resources>
     <StatusBar>
-        <TextBlock Foreground="White" Margin="10 0 0 0" VerticalAlignment="Center" Text="{Binding DigitalTime, ElementName=root}"/>
+        <TextBlock Foreground="DarkOrange" FontSize="13" FontWeight="Bold" Margin="5 0 0 0" VerticalAlignment="Center" Text="{Binding DigitalTime, ElementName=root}"/>
     </StatusBar>
 </UserControl>
