@@ -24,6 +24,7 @@
             <Setter Property="Margin" Value="1"/>
             <Setter Property="TBTextColor" Value="{Binding TBColor, ElementName=root}"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TBReadOnly" Value="{Binding TBReadOnly, ElementName=root}"/>
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal" Margin="2">

@@ -28,9 +28,12 @@ namespace HellsysControls.Controls.BaseControls
         public static readonly DependencyProperty ItemTextProperty =DependencyProperty.Register("ItemText", typeof(string), typeof(EPITextItemControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty TBColorProperty = DependencyProperty.Register("TBColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TSemiColonColorProperty =  DependencyProperty.Register("TSemiColonColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
-
-
-
+        public static readonly DependencyProperty TBReadOnlyProperty = DependencyProperty.Register("TBReadOnly", typeof(bool), typeof(EPITextItemControl), new PropertyMetadata(false));
+        public bool TBReadOnly
+        {
+            get { return (bool)GetValue(TBReadOnlyProperty); }
+            set { SetValue(TBReadOnlyProperty, value); }
+        }
         public Brush TSemiColonColor
         {
             get { return (Brush)GetValue(TSemiColonColorProperty); }

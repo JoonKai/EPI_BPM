@@ -12,7 +12,7 @@
     </WindowChrome.WindowChrome>
     <Window.Resources>
         <Style TargetType="Grid" x:Key="GridProp">
-            <Setter Property="Background" Value="{StaticResource ColorGray}"/>
+            <Setter Property="Background" Value="{StaticResource ColorPrimary}"/>
         </Style>
     </Window.Resources>
     <Grid Style="{StaticResource GridProp}">

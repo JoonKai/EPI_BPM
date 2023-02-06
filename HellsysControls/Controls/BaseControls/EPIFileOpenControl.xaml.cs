@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,21 @@ namespace HellsysControls.Controls.BaseControls
         public EPIFileOpenControl()
         {
             InitializeComponent();
+        }
+
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                tbPath.Text = openFileDialog.FileName;
+            }
+        }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

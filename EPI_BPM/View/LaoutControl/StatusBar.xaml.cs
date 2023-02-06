@@ -20,6 +20,19 @@ namespace EPI_BPM.View.LaoutControl
     /// </summary>
     public partial class StatusBar : UserControl
     {
+
+
+        public DateTime DigitalTime
+        {
+            get { return (DateTime)GetValue(DigitalTimeProperty); }
+            set { SetValue(DigitalTimeProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for DigitalTime.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty DigitalTimeProperty =
+            DependencyProperty.Register("DigitalTime", typeof(DateTime), typeof(StatusBar), new FrameworkPropertyMetadata(DateTime.Now));
+
+
         public StatusBar()
         {
             InitializeComponent();

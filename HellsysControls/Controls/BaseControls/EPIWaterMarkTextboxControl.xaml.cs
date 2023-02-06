@@ -32,11 +32,19 @@ namespace HellsysControls.Controls.BaseControls
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(EPIWaterMarkTextboxControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty ValidatingProperty = DependencyProperty.Register("Validating", typeof(bool), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(false));
         public static readonly DependencyProperty TBTextColorProperty = DependencyProperty.Register("TBTextColor", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.Black));
+        public static readonly DependencyProperty TBReadOnlyProperty = DependencyProperty.Register("TBReadOnly", typeof(bool), typeof(EPIWaterMarkTextboxControl), new PropertyMetadata(false));
         #endregion
 
         #region Public Properties
 
 
+
+
+        public bool TBReadOnly
+        {
+            get { return (bool)GetValue(TBReadOnlyProperty); }
+            set { SetValue(TBReadOnlyProperty, value); }
+        }
         public Brush TBTextColor
         {
             get { return (Brush)GetValue(TBTextColorProperty); }
@@ -96,13 +104,5 @@ namespace HellsysControls.Controls.BaseControls
             }
         }
         #endregion
-    }
-    public enum TypeProperty
-    {
-        None,
-        String,
-        Int,
-        Double,
-        Flot
     }
 }
