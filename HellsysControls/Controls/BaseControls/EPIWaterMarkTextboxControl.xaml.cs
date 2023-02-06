@@ -25,17 +25,23 @@ namespace HellsysControls.Controls.BaseControls
             InitializeComponent();
         }
         #region Public statics
-        public static new readonly DependencyProperty BorderBrushProperty = DependencyProperty.Register("BorderBrush", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.Black));
-        public static new readonly DependencyProperty BorderThicknessProperty = DependencyProperty.Register("BorderThickness", typeof(Thickness), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(new Thickness(1)));
+        public static new readonly DependencyProperty BorderBrushProperty = DependencyProperty.Register("BorderBrush", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.White));
+        public static new readonly DependencyProperty BorderThicknessProperty = DependencyProperty.Register("BorderThickness", typeof(Thickness), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(new Thickness(0.5)));
         public static readonly DependencyProperty WaterMarkTextProperty = DependencyProperty.Register("WaterMarkText", typeof(string), typeof(EPIWaterMarkTextboxControl), new PropertyMetadata(null));
         public static readonly DependencyProperty WaterMarkTextColorProperty = DependencyProperty.Register("WaterMarkTextColor", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.Gray));
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(EPIWaterMarkTextboxControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty ValidatingProperty = DependencyProperty.Register("Validating", typeof(bool), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(false));
+        public static readonly DependencyProperty TBTextColorProperty = DependencyProperty.Register("TBTextColor", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.Black));
         #endregion
 
         #region Public Properties
 
 
+        public Brush TBTextColor
+        {
+            get { return (Brush)GetValue(TBTextColorProperty); }
+            set { SetValue(TBTextColorProperty, value); }
+        }
         public new Brush BorderBrush
         {
             get { return (Brush)GetValue(BorderBrushProperty); }

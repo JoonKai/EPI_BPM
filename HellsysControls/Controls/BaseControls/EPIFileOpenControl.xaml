@@ -1,31 +1,35 @@
-﻿<UserControl x:Class="HellsysControls.Controls.BaseControls.EPITextNumericUpDownItemControl"
+﻿<UserControl x:Class="HellsysControls.Controls.BaseControls.EPIFileOpenControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HellsysControls.Controls.BaseControls"
-             mc:Ignorable="d" x:Name="root">
+             mc:Ignorable="d" x:Name="root" >
     <UserControl.Resources>
-        <Style TargetType="{x:Type TextBlock}" x:Key="THeader">
+        <Style TargetType="{x:Type TextBlock}">
             <Setter Property="Margin" Value="1 0 0 0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Text" Value="{Binding THeaderText, ElementName=root}"/>
             <Setter Property="Width" Value="{Binding THeaderWidth, ElementName=root}"/>
             <Setter Property="Foreground" Value="{Binding THeaderColor, ElementName=root}"/>
         </Style>
-        <Style TargetType="{x:Type local:EPINumericUpDownControl}">
-            <Setter Property="Height" Value="20"/>
-            <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
-            <Setter Property="Margin" Value="1"/>
-        </Style>
-        <Style TargetType="{x:Type TextBlock}" x:Key="TColon">
+        <Style TargetType="{x:Type TextBlock}" x:Key="SemiColon">
             <Setter Property="Margin" Value="5,0"/>
-            <Setter Property="Foreground" Value="{Binding TSemiColonColor, ElementName=root}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="50"/>
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal" Margin="2">
-        <TextBlock Style="{DynamicResource THeader}"  />
-        <TextBlock Text=":" Margin="5,0" Style="{StaticResource TColon}"/>
-        <local:EPINumericUpDownControl/>
+        <TextBlock/>
+        <TextBlock Text=":" Style="{StaticResource SemiColon}"/>
+        <TextBox/>
+        <Button Content="Open" Margin="5 0 0 0"/>
+        <Button Content="View" Margin="5 0 0 0"/>
     </StackPanel>
 </UserControl>

@@ -11,16 +11,24 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Text" Value="{Binding THeaderText, ElementName=root}"/>
             <Setter Property="Width" Value="{Binding THeaderWidth, ElementName=root}"/>
+            <Setter Property="Foreground" Value="{Binding THeaderColor, ElementName=root}"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="TColon">
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Foreground" Value="{Binding TSemiColonColor, ElementName=root}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="{x:Type local:EPIWaterMarkTextboxControl}">
             <Setter Property="Height" Value="20"/>
             <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
             <Setter Property="Margin" Value="1"/>
+            <Setter Property="TBTextColor" Value="{Binding TBColor, ElementName=root}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal" Margin="2">
         <TextBlock Style="{DynamicResource THeader}" />
-        <TextBlock Text=":" Margin="5,0"/>
+        <TextBlock Text=":" Margin="5,0" Style="{StaticResource TColon}"/>
         <local:EPIWaterMarkTextboxControl Text="{Binding ItemText, ElementName=root}"/>
     </StackPanel>
 </UserControl>

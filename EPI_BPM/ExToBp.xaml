@@ -4,10 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Main="clr-namespace:EPI_BPM.View.Screen"
-        xmlns:local="clr-namespace:EPI_BPM"
+        xmlns:local="clr-namespace:EPI_BPM" xmlns:laoutcontrol="clr-namespace:EPI_BPM.View.LaoutControl"
         mc:Ignorable="d"
-        Title="ExToBp" Height="700" Width="1000" MinWidth="1000" MinHeight="700">
-    <Grid>
-        <Main:MainPage/>
+        Title="ExToBp" Height="700" Width="1200" WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <Style TargetType="Grid" x:Key="GridProp">
+            <Setter Property="Background" Value="{StaticResource ColorGray}"/>
+        </Style>
+    </Window.Resources>
+    <Grid Style="{StaticResource GridProp}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <laoutcontrol:TitleBar Grid.Row="0"/>
+        <Main:MainPage Grid.Row="1" Background="Transparent"/>
+        <laoutcontrol:StatusBar Grid.Row="2"/>
     </Grid>
 </Window>

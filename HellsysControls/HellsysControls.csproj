@@ -58,6 +58,9 @@
     <Compile Include="Controls\BaseControls\EPIComboTextBoxControl.xaml.cs">
       <DependentUpon>EPIComboTextBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\EPIFileOpenControl.xaml.cs">
+      <DependentUpon>EPIFileOpenControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPINumericUpDownControl.xaml.cs">
       <DependentUpon>EPINumericUpDownControl.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BaseControls\EPIComboTextBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\EPIFileOpenControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

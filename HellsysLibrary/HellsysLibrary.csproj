@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Colors\ColorMapBrush.cs" />
     <Compile Include="Extensions\EnumBindingSourceExtension.cs" />
+    <Compile Include="Extensions\FindParentExtension.cs" />
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Helpers\IniHelper.cs" />

@@ -15,11 +15,19 @@
             <Setter Property="Control.FontSize" Value="{Binding FontSize, ElementName=root}"/>
             <Setter Property="Control.FontFamily" Value="{Binding FontFamily, ElementName=root}"/>
         </Style>
-        <Style TargetType="{x:Type Grid}" BasedOn="{StaticResource BaseControl}">
-            
-        </Style>
         <Style TargetType="{x:Type epi:EPITextItemControl}">
+            <Setter Property="THeaderColor" Value="{StaticResource ColorWhite}"/>
+            <Setter Property="TBColor" Value="{StaticResource ColorWhite}"/>
+            <Setter Property="TSemiColonColor" Value="{StaticResource ColorWhite}"/>
+        </Style>
+        <Style TargetType="{x:Type epi:EPITextNumericUpDownItemControl}">
+            <Setter Property="THeaderColor" Value="{StaticResource ColorWhite}"/>
+            <Setter Property="TSemiColonColor" Value="{StaticResource ColorWhite}"/>
+        </Style>
+        <Style TargetType="MenuItem">
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="{StaticResource ColorGray}"/>
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -27,10 +35,10 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <!--#region 메뉴바-->
-        <Menu Grid.Row="0" Background="White">
+        <Menu Grid.Row="0" Background="Transparent">
             <MenuItem Header="파일"/>
             <MenuItem Header="환경설정">
                 <MenuItem x:Name="OptionOpen" Click="OptionOpen_Click" Header="옵션"/>
@@ -39,90 +47,100 @@
         </Menu>
         <!--#endregion-->
         <!--#region 카테고리-->
-        <Grid Background="White" Grid.Row="1">
+        <Grid Background="Transparent" Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
             <!--#region 기본 항목 작성-->
             <Grid HorizontalAlignment="Left" Grid.Column="0" Margin="5">
-                <Border BorderThickness="1" BorderBrush="Black" CornerRadius="5">
+                <Border BorderThickness="1" BorderBrush="White" CornerRadius="5">
                     <StackPanel Orientation="Vertical" Margin="10">
                         <epi:EPITextItemControl THeaderText="NO" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100" ItemText="EPI설비기술LT"/>
-                        <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100" ItemText="252203"/>
                         <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
                         <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
                         <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
                         <epi:EPITextItemControl THeaderText="기결재번호" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextItemControl THeaderText="구매사유" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="구분" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="업체코드" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="업체명" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="연락처" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="자재코드" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="제조사" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="품명" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="규격" THeaderWidth="70" TBWidth="100"/>
+                        <epi:EPITextItemControl THeaderText="구분" THeaderWidth="70" TBWidth="50"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--#endregion-->
+            <!--#region 기본 항목 작성-->
+            <Grid HorizontalAlignment="Left" Grid.Column="1" Margin="5">
+                <Border BorderThickness="1" BorderBrush="DarkKhaki" CornerRadius="5">
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100" ItemText="EPI설비기술LT" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
+                        <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100" ItemText="252203" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
+                        <epi:EPITextItemControl THeaderText="구매사유" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="업체코드" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="업체명" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="연락처" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="자재코드" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="제조사" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="품명" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="규격" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                         <epi:EPITextNumericUpDownItemControl THeaderText="요청수량" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="초기단가" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="합계" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="공정명" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="적용설비" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="담당자" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="견적서" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="수리보고서" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="비교단가" THeaderWidth="70" TBWidth="100"/>
-                        <epi:EPITextItemControl THeaderText="비교견적서" THeaderWidth="70" TBWidth="100"/>
+                        <epi:EPITextItemControl THeaderText="초기단가" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="합계" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="공정명" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="적용설비" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="담당자" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="견적서" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="수리보고서" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="비교단가" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                        <epi:EPITextItemControl THeaderText="비교견적서" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                         <epi:EPITextItemControl THeaderText="비고" THeaderWidth="70" TBWidth="100"/>
                     </StackPanel>
                 </Border>
             </Grid>
             <!--#endregion-->
-            
-            
-            <!--#region 버튼 항목 작성--><!--
+            <!--#region 자재 지정-->
+            <Grid HorizontalAlignment="Left" Grid.Column="2" Margin="5">
+                <Border BorderThickness="1" BorderBrush="{StaticResource ColorWhite}" CornerRadius="5">
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <epi:EPIFileOpenControl THeaderText="견적서" THeaderWidth="70" TBWidth="300"/>
+                        <epi:EPIFileOpenControl THeaderText="수리보고서" THeaderWidth="70" TBWidth="300"/>
+                        <epi:EPIFileOpenControl THeaderText="비교단가" THeaderWidth="70" TBWidth="300"/>
+                        <epi:EPIFileOpenControl THeaderText="비교견적서" THeaderWidth="70" TBWidth="300"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--#endregion-->
+            <!--#region 버튼 항목 작성-->
             <Grid Grid.Row="0" Grid.RowSpan="5" Grid.Column="7">
                 <StackPanel Orientation="Vertical">
                     <Button Content="라인추가" Margin="5" VerticalAlignment="Center"/>
                     <Button Content="라인제거" Margin="5" VerticalAlignment="Center"/>
-                    <Button Content="시나리오만들기" Margin="5" VerticalAlignment="Center"/>
+                    <Button Content="즐겨찾기 만들기" Margin="5" VerticalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            --><!--#endregion--><!--
-            <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3">
-                <epi:EPIComboListboxSingleControl Title="CostCenter" FolName="JRCP" FilName="CostCenterList"/>
-            </Grid>
-            <Grid Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3">
-                <epi:EPIComboListViewTwoColumnControl Title="CostCenter"
-                                                     ListviewColTitle1="업체코드"
-                                                     ListviewColTitle2="업체명" FolName="JRCP" FilName="Cost"/>
-            </Grid>
-            <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2">
-                --><!--<epi:EPISearchComboTwoItemsListBoxControl Title="손준석테스트" FolName="son" FilName="sskv"/>--><!--
-            </Grid>-->
+            <!--#endregion-->
         </Grid>
         <!--#endregion-->
         <!--#region 스플리터-->
-        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Margin="1" Background="#FF538829"/>
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Margin="1" Background="{StaticResource ColorOrange}"/>
         <!--#endregion-->
         <!--#region 데이터그리드뷰-->
-        <Grid Grid.Row="3" Background="White">
+        <Grid Grid.Row="3" Background="Transparent">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="White">
+            <Grid Grid.Row="0">
                 <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
-                    <TextBlock Text="총합계" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Text=" : " VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBox IsReadOnly="True" Width="100" Margin="5" VerticalContentAlignment="Center"/>
+                    <epi:EPITextItemControl THeaderText="합계" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                 </StackPanel>
             </Grid>
-            <WindowsFormsHost Grid.Row="1" Margin="5">
-                <win:DataGridView x:Name="ExcelDataGrid" MouseWheel="ExcelDataGrid_MouseWheel"/>
-            </WindowsFormsHost>
+            <Grid Grid.Row="1" Margin="5">
+                <Border BorderThickness="1" BorderBrush="White">
+                    <WindowsFormsHost Margin="5">
+                        <win:DataGridView x:Name="ExcelDataGrid" MouseWheel="ExcelDataGrid_MouseWheel"/>
+                    </WindowsFormsHost>
+                </Border>
+            </Grid>
         </Grid>
         <!--#endregion-->
     </Grid>

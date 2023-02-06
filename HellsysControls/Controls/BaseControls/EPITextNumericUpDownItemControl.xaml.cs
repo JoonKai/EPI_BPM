@@ -25,7 +25,22 @@ namespace HellsysControls.Controls.BaseControls
         public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(null));
         public static readonly DependencyProperty THeaderWidthProperty = DependencyProperty.Register("THeaderWidth", typeof(int), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(50));
         public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextNumericUpDownItemControl), new PropertyMetadata(50));
+        public static readonly DependencyProperty THeaderColorProperty = DependencyProperty.Register("THeaderColor", typeof(Brush), typeof(EPITextNumericUpDownItemControl), new UIPropertyMetadata(Brushes.Black));
+        public static readonly DependencyProperty TSemiColonColorProperty = DependencyProperty.Register("TSemiColonColor", typeof(Brush), typeof(EPITextNumericUpDownItemControl), new UIPropertyMetadata(Brushes.Black));
 
+
+
+
+        public Brush TSemiColonColor
+        {
+            get { return (Brush)GetValue(TSemiColonColorProperty); }
+            set { SetValue(TSemiColonColorProperty, value); }
+        }
+        public Brush THeaderColor
+        {
+            get { return (Brush)GetValue(THeaderColorProperty); }
+            set { SetValue(THeaderColorProperty, value); }
+        }
         public string THeaderText
         {
             get { return (string)GetValue(THeaderTextProperty); }
