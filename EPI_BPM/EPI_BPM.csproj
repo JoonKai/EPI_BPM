@@ -173,5 +173,8 @@
   <ItemGroup>
     <Resource Include="Ico\EPIMoney.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

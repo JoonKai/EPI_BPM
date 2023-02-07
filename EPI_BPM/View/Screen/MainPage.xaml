@@ -42,6 +42,19 @@
             <Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
             <Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/>
         </Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="RowBackground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF2F2F2F"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#FF2F2F2F"/>
+            <Setter Property="RowHeaderWidth" Value="100"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="MaxHeight" Value="400"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserDeleteRows" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="AutoGenerateColumns" Value="True"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -151,9 +164,11 @@
             </Grid>
             <Grid Grid.Row="1" Margin="5">
                 <Border BorderThickness="1" BorderBrush="White">
-                    <WindowsFormsHost Margin="5">
+                    <DataGrid x:Name="dgBPM">
+                    </DataGrid>
+                    <!--<WindowsFormsHost Margin="5">
                         <win:DataGridView x:Name="ExcelDataGrid" MouseWheel="ExcelDataGrid_MouseWheel"/>
-                    </WindowsFormsHost>
+                    </WindowsFormsHost>-->
                 </Border>
             </Grid>
         </Grid>

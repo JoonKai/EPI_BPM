@@ -19,73 +19,73 @@ namespace EPI_BPM.View.Screen
 
         private void InitializeDataGridView()
         {
-            ExcelDataGrid.BackgroundColor = System.Drawing.Color.White;
-            ExcelDataGrid.ColumnHeadersHeight = 80;
-            ExcelDataGrid.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            ExcelDataGrid.RowHeadersVisible = false;
-            ExcelDataGrid.AllowUserToAddRows = false;
-            ExcelDataGrid.AllowUserToDeleteRows = false;
-            ExcelDataGrid.AllowUserToResizeColumns = false;
-            ExcelDataGrid.AllowUserToResizeRows = false;
-            ExcelDataGrid.RowTemplate.Height = 70;
-            ExcelDataGrid.Font = new System.Drawing.Font("tahoma", 9);
-            ExcelDataGrid.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            ExcelDataGrid.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            ExcelDataGrid.EnableHeadersVisualStyles = false;
-            ExcelDataGrid.MultiSelect = true;
+            //ExcelDataGrid.BackgroundColor = System.Drawing.Color.White;
+            //ExcelDataGrid.ColumnHeadersHeight = 80;
+            //ExcelDataGrid.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            //ExcelDataGrid.RowHeadersVisible = false;
+            //ExcelDataGrid.AllowUserToAddRows = false;
+            //ExcelDataGrid.AllowUserToDeleteRows = false;
+            //ExcelDataGrid.AllowUserToResizeColumns = false;
+            //ExcelDataGrid.AllowUserToResizeRows = false;
+            //ExcelDataGrid.RowTemplate.Height = 70;
+            //ExcelDataGrid.Font = new System.Drawing.Font("tahoma", 9);
+            //ExcelDataGrid.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            //ExcelDataGrid.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            //ExcelDataGrid.EnableHeadersVisualStyles = false;
+            //ExcelDataGrid.MultiSelect = true;
         }
 
         private void AddDataGridColumns()
         {
-            int num = Helper.DGVHelper.GetCostCategoryCount();
-            List<string> categoryList = new List<string>();
-            categoryList = Helper.DGVHelper.GetCostCotegoryList();
+            //int num = Helper.DGVHelper.GetCostCategoryCount();
+            //List<string> categoryList = new List<string>();
+            //categoryList = Helper.DGVHelper.GetCostCotegoryList();
 
-            for (int i = 0; i < num; i++)
-            {
-                ExcelDataGrid.Columns.Add("", categoryList[i].ToString());
-                ExcelDataGrid.Columns[i].SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    dgBPM.Columns.Add(categoryList[i].ToString());
+            //    dgBPM.Columns[i].SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
 
-                try
-                {
-                    switch (i)
-                    {
-                        case 0:
-                            ExcelDataGrid.Columns[i].Width = 40;
-                            break;
-                        case 1:
-                            ExcelDataGrid.Columns[i].Width = 90;
-                            break;
-                        case 2:
-                            ExcelDataGrid.Columns[i].Width = 90;
-                            break;
-                        case 28:
-                            ExcelDataGrid.Columns[i].Width = 300;
-                            break;
-                        default:
-                            ExcelDataGrid.Columns[i].Width = 100;
-                            break;
-                    }
-                }
-                catch (Exception) { }
+            //    try
+            //    {
+            //        switch (i)
+            //        {
+            //            case 0:
+            //                dgBPM.Columns[i].Width = 40;
+            //                break;
+            //            case 1:
+            //                dgBPM.Columns[i].Width = 90;
+            //                break;
+            //            case 2:
+            //                dgBPM.Columns[i].Width = 90;
+            //                break;
+            //            case 28:
+            //                dgBPM.Columns[i].Width = 300;
+            //                break;
+            //            default:
+            //                dgBPM.Columns[i].Width = 100;
+            //                break;
+            //        }
+            //    }
+            //    catch (Exception) { }
 
-            }
+            //}
 
 
         }
 
         private void ExcelDataGrid_MouseWheel(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            int currentIndex = ExcelDataGrid.FirstDisplayedScrollingColumnIndex;
-            int ScrollLines = System.Windows.Forms.SystemInformation.MouseWheelScrollLines;
-            if(e.Delta > 0)
-            {
-                ExcelDataGrid.FirstDisplayedScrollingColumnIndex =Math.Max(0,currentIndex - ScrollLines);
-            }
-            else if(e.Delta < 0)
-            {
-                ExcelDataGrid.FirstDisplayedScrollingColumnIndex = currentIndex + ScrollLines;
-            }
+            //int currentIndex = ExcelDataGrid.FirstDisplayedScrollingColumnIndex;
+            //int ScrollLines = System.Windows.Forms.SystemInformation.MouseWheelScrollLines;
+            //if(e.Delta > 0)
+            //{
+            //    ExcelDataGrid.FirstDisplayedScrollingColumnIndex =Math.Max(0,currentIndex - ScrollLines);
+            //}
+            //else if(e.Delta < 0)
+            //{
+            //    ExcelDataGrid.FirstDisplayedScrollingColumnIndex = currentIndex + ScrollLines;
+            //}
 
         }
 
