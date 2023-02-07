@@ -1,6 +1,7 @@
 ﻿using HellsysLibrary.Extensions;
 using System.Windows;
 using System.Windows.Controls;
+using WinInterop = System.Windows.Interop;
 
 namespace EPI_BPM.View.LaoutControl
 {
@@ -35,7 +36,8 @@ namespace EPI_BPM.View.LaoutControl
 
         private void BtnMaximize_Click(object sender, RoutedEventArgs e)
         {
-            ParentWindow.WindowState= ParentWindow.WindowState == WindowState.Maximized
+            
+            ParentWindow.WindowState=ParentWindow.WindowState == WindowState.Maximized
                 ?WindowState.Normal 
                 :WindowState.Maximized;
         }
@@ -44,6 +46,7 @@ namespace EPI_BPM.View.LaoutControl
         {
 
             ParentWindow.WindowState = WindowState.Minimized;
+            ParentWindow.ResizeMode = ResizeMode.CanResizeWithGrip;
         }
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)

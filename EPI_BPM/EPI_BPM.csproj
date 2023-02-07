@@ -94,6 +94,7 @@
     <Compile Include="View\Screen\SettingScreen.xaml.cs">
       <DependentUpon>SettingScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowMaximizeManager.cs" />
     <Page Include="ExToBp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

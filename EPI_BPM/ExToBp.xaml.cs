@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WinInterop = System.Windows.Interop;
 
 namespace EPI_BPM
 {
@@ -23,6 +24,13 @@ namespace EPI_BPM
         public ExToBp()
         {
             InitializeComponent();
+            this.SourceInitialized += ExToBp_SourceInitialized;
+        }
+
+        private void ExToBp_SourceInitialized(object sender, EventArgs e)
+        {
+            System.IntPtr handle = (new WinInterop.WindowInteropHelper(this)).Handle;
+            WinInterop.HwndSource.FromHwnd(handle).AddHook(new WinInterop.HwndSourceHook(WindowMaximizeManager.WindowProc));
         }
     }
 }
