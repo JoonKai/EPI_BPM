@@ -7,7 +7,7 @@
              xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls;assembly=HellsysControls"
              xmlns:ex="clr-namespace:HellsysLibrary.Extensions;assembly=HellsysLibrary"
              xmlns:en="clr-namespace:EPI_BPM.Model"
-             xmlns:local="clr-namespace:EPI_BPM.View.Screen"
+             xmlns:local="clr-namespace:EPI_BPM.View.Screen" xmlns:laoutcontrol="clr-namespace:EPI_BPM.View.LaoutControl"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1200" FontSize="12" x:Name="root">
     <UserControl.Resources>
@@ -60,7 +60,7 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!--#region 메뉴바-->
         <Menu Grid.Row="0" Background="Transparent">
