@@ -18,11 +18,15 @@
     <Grid Style="{StaticResource GridProp}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.5"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <laoutcontrol:TitleBar Grid.Row="0"/>
-        <Main:MainPage Grid.Row="1" Background="Transparent"/>
-        <laoutcontrol:StatusBar Grid.Row="2"/>
+        <Grid Grid.Row="1" Background="{StaticResource ColorOrange}"/>
+        <Main:MainPage Grid.Row="2" Background="Transparent"/>
+        <Grid Grid.Row="3" Background="{StaticResource ColorOrange}"/>
+        <laoutcontrol:StatusBar Grid.Row="4"/>
     </Grid>
 </Window>

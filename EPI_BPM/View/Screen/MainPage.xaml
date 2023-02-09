@@ -49,7 +49,6 @@
             <Setter Property="VerticalGridLinesBrush" Value="#FF2F2F2F"/>
             <Setter Property="RowHeaderWidth" Value="100"/>
             <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="MaxHeight" Value="400"/>
             <Setter Property="CanUserAddRows" Value="False"/>
             <Setter Property="CanUserDeleteRows" Value="False"/>
             <Setter Property="IsReadOnly" Value="True"/>
