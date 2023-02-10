@@ -29,9 +29,10 @@
             <Setter Property="THeaderColor" Value="{StaticResource ColorWhite}"/>
             <Setter Property="TSemiColonColor" Value="{StaticResource ColorWhite}"/>
         </Style>
-        <Style TargetType="MenuItem">
-            <Setter Property="Foreground" Value="White"/>
+        <Style TargetType="{x:Type MenuItem}">
+            <Setter Property="Foreground" Value="{StaticResource ColorWhite}"/>
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontWeight" Value="Bold"/>
         </Style>
         <Style TargetType="{x:Type GroupBox}">
             <Setter Property="Foreground" Value="{StaticResource ColorWhite}"/>
@@ -66,7 +67,7 @@
         <Menu Grid.Row="0" Background="Transparent">
             <MenuItem Header="파일"/>
             <MenuItem Header="환경설정">
-                <MenuItem x:Name="OptionOpen" Click="OptionOpen_Click" Header="옵션"/>
+                <MenuItem x:Name="OptionOpen" Click="OptionOpen_Click" Header="옵션" Foreground="Black" FontWeight="Light"/>
             </MenuItem>
             <MenuItem Header="기타"/>
         </Menu>
@@ -82,14 +83,17 @@
             <!--#region 기본 항목 작성-->
             <Grid HorizontalAlignment="Left" Grid.Column="0" Margin="5">
                 <GroupBox Header="Default" >
-                    <StackPanel Orientation="Vertical" Margin="10">
-                        <epi:EPITextItemControl THeaderText="NO" ItemText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
-                        <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextItemControl THeaderText="기결재번호" THeaderWidth="70" TBWidth="50"/>
-                        <epi:EPITextItemControl THeaderText="구분" THeaderWidth="70" TBWidth="50"/>
-                    </StackPanel>
+                    <ScrollViewer>
+                        <StackPanel Orientation="Vertical" Margin="10">
+                            <epi:EPITextItemControl THeaderText="NO" ItemText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
+                            <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
+                            <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
+                            <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
+                            <epi:EPITextItemControl THeaderText="기결재번호" THeaderWidth="70" TBWidth="50"/>
+                            <epi:EPITextItemControl THeaderText="구분" THeaderWidth="70" TBWidth="50"/>
+                            <epi:EPIComboBoxControl Width="100"/>
+                        </StackPanel>
+                    </ScrollViewer>
                 </GroupBox>
             </Grid>
             <!--#endregion-->
@@ -158,7 +162,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
-                    <epi:EPITextItemControl THeaderText="합계" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                    <epi:EPITextItemControl ItemText="3,000,000" TBColor="DarkOrange" THeaderText="합계" TBReadOnly="True" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1" Margin="5">

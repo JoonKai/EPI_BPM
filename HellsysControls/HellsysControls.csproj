@@ -49,6 +49,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commons\ComboBoxColorManager.cs" />
+    <Compile Include="Controls\BaseControls\EPIComboBoxControl.xaml.cs">
+      <DependentUpon>EPIComboBoxControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml.cs">
       <DependentUpon>EPIComboListboxSingleControl.xaml</DependentUpon>
     </Compile>
@@ -102,6 +106,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\BaseControls\EPIComboBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
