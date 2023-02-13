@@ -14,17 +14,21 @@
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Margin="5 5 5 0" Width="60" Height="20" Content="저장" />
-                <Button Margin="5 5 5 0" Width="60" Height="20" Content="취소" />
+                <Button Margin="5 5 5 0" Width="60" Height="20" Content="저장" Style="{StaticResource EPIButton1}"/>
+                <Button Margin="5 5 5 0" Width="60" Height="20" Content="취소" Style="{StaticResource EPIButton1}"/>
             </StackPanel>
         </Grid>
-        <TabControl Grid.Row="1" Grid.Column="0" Margin="5">
+        <TabControl Grid.Row="1" Grid.Column="0" Margin="5" Background="Transparent">
             <!--#region SettingTab 일반-->
             <TabItem Header="일반" Margin="-3 0 0 0">
             </TabItem>
             <!--#endregion-->
-            <!--#region SettingTab 데이터베이스-->
-            <TabItem Header="데이터베이스">
+            <!--#region SettingTab 업체등록-->
+            <TabItem Header="업체등록">
+            </TabItem>
+            <!--#endregion-->
+            <!--#region SettingTab -->
+            <TabItem Header="기타">
             </TabItem>
             <!--#endregion-->
         </TabControl>
