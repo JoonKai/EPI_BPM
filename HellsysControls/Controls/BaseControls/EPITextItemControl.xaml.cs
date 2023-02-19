@@ -24,11 +24,46 @@ namespace HellsysControls.Controls.BaseControls
         public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextItemControl), new PropertyMetadata(null));
         public static readonly DependencyProperty THeaderWidthProperty = DependencyProperty.Register("THeaderWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
         public static readonly DependencyProperty THeaderColorProperty = DependencyProperty.Register("THeaderColor", typeof(Brush), typeof(EPITextItemControl), new PropertyMetadata(Brushes.Black));
-        public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
         public static readonly DependencyProperty ItemTextProperty =DependencyProperty.Register("ItemText", typeof(string), typeof(EPITextItemControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty TBColorProperty = DependencyProperty.Register("TBColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TSemiColonColorProperty =  DependencyProperty.Register("TSemiColonColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TBReadOnlyProperty = DependencyProperty.Register("TBReadOnly", typeof(bool), typeof(EPITextItemControl), new PropertyMetadata(false));
+        public static new readonly DependencyProperty HorizontalContentAlignmentProperty = DependencyProperty.Register("HorizontalContentAlignment", typeof(HorizontalAlignment), typeof(EPITextItemControl), new UIPropertyMetadata(HorizontalAlignment.Left));
+        public static readonly DependencyProperty TBTextWrappingProperty = DependencyProperty.Register("TBTextWrapping", typeof(TextWrapping), typeof(EPITextItemControl), new UIPropertyMetadata(TextWrapping.NoWrap));
+        public static readonly DependencyProperty TBAcceptsReturnProperty = DependencyProperty.Register("TBAcceptsReturn", typeof(bool), typeof(EPITextItemControl), new UIPropertyMetadata(false));
+        public static readonly DependencyProperty TBHeightProperty = DependencyProperty.Register("TBHeight", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(20));
+        public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
+
+
+
+
+        public int TBHeight
+        {
+            get { return (int)GetValue(TBHeightProperty); }
+            set { SetValue(TBHeightProperty, value); }
+        }
+        public int TBWidth
+        {
+            get { return (int)GetValue(TBWidthProperty); }
+            set { SetValue(TBWidthProperty, value); }
+        }
+        public bool TBAcceptsReturn
+        {
+            get { return (bool)GetValue(TBAcceptsReturnProperty); }
+            set { SetValue(TBAcceptsReturnProperty, value); }
+        }
+
+        public TextWrapping TBTextWrapping
+        {
+            get { return (TextWrapping)GetValue(TBTextWrappingProperty); }
+            set { SetValue(TBTextWrappingProperty, value); }
+        }
+
+        public new HorizontalAlignment HorizontalContentAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(HorizontalContentAlignmentProperty); }
+            set { SetValue(HorizontalContentAlignmentProperty, value); }
+        }
         public bool TBReadOnly
         {
             get { return (bool)GetValue(TBReadOnlyProperty); }
@@ -59,11 +94,7 @@ namespace HellsysControls.Controls.BaseControls
             get { return (int)GetValue(THeaderWidthProperty); }
             set { SetValue(THeaderWidthProperty, value); }
         }
-        public int TBWidth
-        {
-            get { return (int)GetValue(TBWidthProperty); }
-            set { SetValue(TBWidthProperty, value); }
-        }
+        
         public string ItemText
         {
             get { return (string)GetValue(ItemTextProperty); }

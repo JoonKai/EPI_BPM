@@ -79,8 +79,14 @@
     <Compile Include="Helpers\DataGridViewHelper.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\PMCategory.cs" />
     <Compile Include="Option.xaml.cs">
       <DependentUpon>Option.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\SchedulerPageViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\LaoutControl\ListBoxItem.xaml.cs">
+      <DependentUpon>ListBoxItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LaoutControl\OptionTitleBar.xaml.cs">
       <DependentUpon>OptionTitleBar.xaml</DependentUpon>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="View\Screen\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screen\SchedulerPage.xaml.cs">
+      <DependentUpon>SchedulerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\SettingScreen.xaml.cs">
       <DependentUpon>SettingScreen.xaml</DependentUpon>
@@ -122,6 +131,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\LaoutControl\ListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LaoutControl\OptionTitleBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Screen\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Screen\SchedulerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,8 +201,6 @@
   <ItemGroup>
     <Resource Include="Ico\EPIMoney.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

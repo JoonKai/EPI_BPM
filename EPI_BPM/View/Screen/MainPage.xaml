@@ -71,7 +71,7 @@
         </Menu>
         <!--#endregion-->
         <!--#region 카테고리-->
-        <TabControl Grid.Row="1" Background="Transparent" Margin="2">
+        <TabControl Grid.Row="2" Background="Transparent" Margin="2">
             <TabItem Header="BPM">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -91,7 +91,7 @@
                             <GroupBox Header="Default" >
                                 <ScrollViewer>
                                     <StackPanel Orientation="Vertical" Margin="10">
-                                        <epi:EPITextItemControl THeaderText="NO" ItemText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
+                                        <epi:EPITextItemControl HorizontalContentAlignment="Center" THeaderText="NO" ItemText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
                                         <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
                                         <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
                                         <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
@@ -183,8 +183,10 @@
                     <!--#endregion-->
                 </Grid>
             </TabItem>
-            <TabItem Header="기타">
-                
+            <TabItem Header="PMScheduler">
+                <local:SchedulerPage/>
+            </TabItem>
+            <TabItem Header="즐겨찾기 바로가기">
             </TabItem>
         </TabControl>
     </Grid>

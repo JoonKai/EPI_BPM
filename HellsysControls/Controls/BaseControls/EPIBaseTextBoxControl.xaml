@@ -1,15 +1,12 @@
-﻿<UserControl x:Class="HellsysControls.Controls.BaseControls.EPIWaterMarkTextboxControl"
+﻿<UserControl x:Class="HellsysControls.Controls.BaseControls.EPIBaseTextBoxControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:converter="clr-namespace:HellsysControls.Controls.Converters"
              xmlns:local="clr-namespace:HellsysControls.Controls.BaseControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="200" x:Name="root">
+             xmlns:converter="clr-namespace:HellsysControls.Controls.Converters"
+             mc:Ignorable="d" x:Name="root">
     <UserControl.Resources>
-        <converter:ValidatingBorderBrushConverter x:Key="ValidatingBorderBrushConverter"/>
-        <converter:ValidatingBorderThicknessConverter x:Key="ValidatingBorderThicknessConverter"/>
         <Style x:Key="BaseControl" TargetType="{x:Type FrameworkElement}">
             <Setter Property="Control.FontSize" Value="{Binding FontSize, ElementName=root}"/>
             <Setter Property="Control.FontFamily" Value="{Binding FontFamily, ElementName=root}"/>
@@ -20,12 +17,6 @@
             <Setter Property="Padding" Value="5 0 0 0"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Visibility" Value="Collapsed"/>
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Text, ElementName=txt}" Value="">
-                    <Setter Property="Visibility" Value="Visible"/>
-                </DataTrigger>
-            </Style.Triggers>
         </Style>
         <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseControl}">
             <Setter Property="Text" Value="{Binding Text, ElementName=root, UpdateSourceTrigger=PropertyChanged}"/>
@@ -37,26 +28,10 @@
             <Setter Property="AcceptsReturn" Value="{Binding AcceptsReturn, ElementName=root}"/>
             <Setter Property="Width" Value="{Binding Width, ElementName=root}"/>
             <Setter Property="Height" Value="{Binding Height,ElementName=root}"/>
-            <Setter Property="BorderBrush">
-                <Setter.Value>
-                    <MultiBinding Converter="{StaticResource ValidatingBorderBrushConverter}">
-                        <Binding Path="Validating" ElementName="root"/>
-                        <Binding Path="BorderBrush" ElementName="root"/>
-                    </MultiBinding>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="BorderThickness">
-                <Setter.Value>
-                    <MultiBinding Converter="{StaticResource ValidatingBorderThicknessConverter}">
-                        <Binding Path="Validating" ElementName="root"/>
-                        <Binding Path="BorderThickness" ElementName="root"/>
-                    </MultiBinding>
-                </Setter.Value>
-            </Setter>
         </Style>
     </UserControl.Resources>
     <Grid>
         <TextBlock/>
-        <TextBox x:Name="baseTextbox" TextChanged="baseTextbox_TextChanged"/>
+        <TextBox x:Name="baseTextbox"/>
     </Grid>
 </UserControl>

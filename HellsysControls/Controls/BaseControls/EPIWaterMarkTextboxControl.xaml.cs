@@ -20,10 +20,6 @@ namespace HellsysControls.Controls.BaseControls
     /// </summary>
     public partial class EPIWaterMarkTextboxControl : UserControl
     {
-        public EPIWaterMarkTextboxControl()
-        {
-            InitializeComponent();
-        }
         #region Public statics
         public static new readonly DependencyProperty BorderBrushProperty = DependencyProperty.Register("BorderBrush", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.White));
         public static new readonly DependencyProperty BorderThicknessProperty = DependencyProperty.Register("BorderThickness", typeof(Thickness), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(new Thickness(0.5)));
@@ -33,11 +29,47 @@ namespace HellsysControls.Controls.BaseControls
         public static readonly DependencyProperty ValidatingProperty = DependencyProperty.Register("Validating", typeof(bool), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(false));
         public static readonly DependencyProperty TBTextColorProperty = DependencyProperty.Register("TBTextColor", typeof(Brush), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TBReadOnlyProperty = DependencyProperty.Register("TBReadOnly", typeof(bool), typeof(EPIWaterMarkTextboxControl), new PropertyMetadata(false));
+        public static readonly DependencyProperty TextWrappingProperty = DependencyProperty.Register("TextWrapping", typeof(TextWrapping), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(TextWrapping.NoWrap));
+        public static readonly DependencyProperty AcceptsReturnProperty = DependencyProperty.Register("AcceptsReturn", typeof(bool), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(false));
+        public static new readonly DependencyProperty HeightProperty = DependencyProperty.Register("Height", typeof(int), typeof(EPIWaterMarkTextboxControl), new PropertyMetadata(20));
+        public static new readonly DependencyProperty WidthProperty = DependencyProperty.Register("Width", typeof(int), typeof(EPIWaterMarkTextboxControl), new PropertyMetadata(50));
+        public static new readonly DependencyProperty HorizontalContentAlignmentProperty =DependencyProperty.Register("HorizontalContentAlignment", typeof(HorizontalAlignment), typeof(EPIWaterMarkTextboxControl), new UIPropertyMetadata(HorizontalAlignment.Left));
         #endregion
 
         #region Public Properties
 
 
+
+        public new int Width
+        {
+            get { return (int)GetValue(WidthProperty); }
+            set { SetValue(WidthProperty, value); }
+        }
+
+
+
+        public new int Height
+        {
+            get { return (int)GetValue(HeightProperty); }
+            set { SetValue(HeightProperty, value); }
+        }
+
+
+        public TextWrapping TextWrapping
+        {
+            get { return (TextWrapping)GetValue(TextWrappingProperty); }
+            set { SetValue(TextWrappingProperty, value); }
+        }
+        public bool AcceptsReturn
+        {
+            get { return (bool)GetValue(AcceptsReturnProperty); }
+            set { SetValue(AcceptsReturnProperty, value); }
+        }
+        public new HorizontalAlignment HorizontalContentAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(HorizontalContentAlignmentProperty); }
+            set { SetValue(HorizontalContentAlignmentProperty, value); }
+        }
 
 
         public bool TBReadOnly
@@ -81,14 +113,11 @@ namespace HellsysControls.Controls.BaseControls
             get { return (bool)GetValue(ValidatingProperty); }
             set { SetValue(ValidatingProperty, value); }
         }
-
-
-
-
-
-
         #endregion
-
+        public EPIWaterMarkTextboxControl()
+        {
+            InitializeComponent();
+        }
         #region Event
         private void baseTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {

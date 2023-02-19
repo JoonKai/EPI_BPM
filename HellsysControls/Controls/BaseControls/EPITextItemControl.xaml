@@ -19,12 +19,15 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="{x:Type local:EPIWaterMarkTextboxControl}">
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Height" Value="{Binding TBHeight, ElementName=root}"/>
             <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
             <Setter Property="Margin" Value="1"/>
             <Setter Property="TBTextColor" Value="{Binding TBColor, ElementName=root}"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, ElementName=root}"/>
             <Setter Property="TBReadOnly" Value="{Binding TBReadOnly, ElementName=root}"/>
+            <Setter Property="TextWrapping" Value="{Binding TBTextWrapping, ElementName=root}"/>
+            <Setter Property="AcceptsReturn" Value="{Binding TBAcceptsReturn, ElementName=root}"/>
         </Style>
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal" Margin="2">

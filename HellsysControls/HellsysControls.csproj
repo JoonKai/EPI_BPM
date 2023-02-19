@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\ComboBoxColorManager.cs" />
+    <Compile Include="Controls\BaseControls\EPIBaseTextBoxControl.xaml.cs">
+      <DependentUpon>EPIBaseTextBoxControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml.cs">
       <DependentUpon>EPIComboListboxSingleControl.xaml</DependentUpon>
     </Compile>
@@ -68,6 +71,9 @@
     <Compile Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
       <DependentUpon>EPISearchComboTwoItemsListBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\TankControl\EPITank1.xaml.cs">
+      <DependentUpon>EPITank1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BaseControls\EPITextItemControl.xaml.cs">
       <DependentUpon>EPITextItemControl.xaml</DependentUpon>
     </Compile>
@@ -77,8 +83,14 @@
     <Compile Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml.cs">
       <DependentUpon>EPIWaterMarkTextboxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseControls\TankControl\EPITank2.xaml.cs">
+      <DependentUpon>EPITank2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Converters\ValidatingBorderBrushConverter.cs" />
     <Compile Include="Controls\Converters\ValidatingBorderThicknessConverter.cs" />
+    <Compile Include="Controls\GageControls\EPIBaseGageControl.xaml.cs">
+      <DependentUpon>EPIBaseGageControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +115,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\BaseControls\EPIBaseTextBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +143,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\BaseControls\TankControl\EPITank1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BaseControls\EPITextItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +156,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BaseControls\TankControl\EPITank2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GageControls\EPIBaseGageControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
