@@ -83,11 +83,9 @@
     <Compile Include="Option.xaml.cs">
       <DependentUpon>Option.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Selector\SchedulerSelector.cs" />
     <Compile Include="ViewModel\SchedulerPageViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
-    <Compile Include="View\LaoutControl\ListBoxItem.xaml.cs">
-      <DependentUpon>ListBoxItem.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\LaoutControl\OptionTitleBar.xaml.cs">
       <DependentUpon>OptionTitleBar.xaml</DependentUpon>
     </Compile>
@@ -128,10 +126,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\ControlStyles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\LaoutControl\ListBoxItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

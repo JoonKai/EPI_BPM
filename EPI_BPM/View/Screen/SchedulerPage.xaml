@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EPI_BPM.View.Screen" xmlns:basecontrols="clr-namespace:HellsysControls.Controls.BaseControls;assembly=HellsysControls"
-             xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls.TankControl;assembly=HellsysControls"
+             xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls.TankControl;assembly=HellsysControls" xmlns:selector="clr-namespace:EPI_BPM.Selector"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -12,10 +12,9 @@
             <Setter Property="TBTextColor" Value="White"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
-        <ControlTemplate x:Key="PMS">
-            <DockPanel LastChildFill="True">
-                
-            <Grid DockPanel.Dock="Top" Height="20">
+        <selector:SchedulerSelector x:Key="ItemSelector"/>
+        <DataTemplate x:Key="PMScheduler1">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40"/>
                     <ColumnDefinition Width="40"/>
@@ -30,13 +29,27 @@
                     <ColumnDefinition Width="30"/>
                     <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="75"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="위치"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding Site}" Grid.Column="0" Width="40" TBTextColor="{StaticResource ColorOrange}"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding MOCVDNumber}" Grid.Column="1" Width="40"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding ManufacturingStatus}" Grid.Column="2" TBTextColor="Red"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding MOCVDModel}" Grid.Column="3"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding MOCVDCode}" Width="70" Grid.Column="4"/>
+                <epi:EPITank2 GageValue="{Binding ChamberGage}" Grid.Column="5"/>
+                <epi:EPITank2 GageValue="{Binding FilterGage}" Grid.Column="6"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding ChamberCount}" Grid.Column="7"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding FilterCount}" Grid.Column="8"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding PMCycle}" Grid.Column="9"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding FilterCycle}" Grid.Column="10"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding PMDate}" Width="70" Grid.Column="11" TBTextColor="{StaticResource ColorOrange}"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding FilterDate}" Width="70" Grid.Column="12" TBTextColor="{StaticResource ColorOrange}"/>
+                <basecontrols:EPIBaseTextBoxControl Text="{Binding ETC}" Grid.Column="13" Width="400"/>
+                <Button Margin="1" Content="삭제" Grid.Column="14" Width="72" Style="{StaticResource EPIButton1}"/>
             </Grid>
-            </DockPanel>
-        </ControlTemplate>
-        <DataTemplate x:Key="PMSchedule">
+        </DataTemplate>
+        <DataTemplate x:Key="PMScheduler2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40"/>
@@ -79,7 +92,7 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplate="{StaticResource PMSchedule}">
+        <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}" >
         </ListBox>
     </Grid>
 </UserControl>
