@@ -89,10 +89,21 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}" >
-        </ListBox>
+        <Grid Grid.Row="0"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <ListBox Grid.Row="0" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}" >
+            </ListBox>
+            <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
+            <Grid Grid.Row="2">
+                
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>
