@@ -83,10 +83,10 @@
                 <basecontrols:EPIBaseTextBoxControl Text="{Binding MOCVDModel}" Grid.Column="3"/>
                 <basecontrols:EPIBaseTextBoxControl Text="{Binding MOCVDCode}" Width="70" Grid.Column="4"/>
                 <Border Grid.Column="5" Background="Black" BorderBrush="White" BorderThickness="0.5">
-                    <epi:EPITank2 GageValue="{Binding ChamberGage}" />
+                    <epi:EPITank2 GageValue="{Binding ChamberGage}" Height="20" />
                 </Border>
                 <Border Grid.Column="6" Background="Black" BorderBrush="White" BorderThickness="0.5">
-                    <epi:EPITank2 GageValue="{Binding FilterGage}"/>
+                    <epi:EPITank2 GageValue="{Binding FilterGage}" Height="20"/>
                 </Border>
                 <basecontrols:EPIBaseTextBoxControl Text="{Binding DailyRunCount}" Width="70" Grid.Column="7"/>
                 <basecontrols:EPIBaseTextBoxControl Text="{Binding RemainingChamberCount}" Width="70" Grid.Column="8" TBReadOnly="True" TBTextColor="Gray"/>

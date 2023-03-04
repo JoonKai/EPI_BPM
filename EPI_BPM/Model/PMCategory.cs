@@ -16,7 +16,7 @@ namespace EPI_BPM.Model
         public int ChamberGage { get; set; }
         public int FilterGage { get; set; }
         public int DailyRunCount { get; set; }
-        public int RemainingChamberCount { get; set; 
+        public int RemainingChamberCount { get; set; } 
         public int RemainingFilterCount { get; set; }
         public int ChamberCount { get; set; }
         public int FilterCount { get; set; }
