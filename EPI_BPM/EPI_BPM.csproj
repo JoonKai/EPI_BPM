@@ -80,8 +80,8 @@
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Model\Currency.cs" />
     <Compile Include="Model\PMCategory.cs" />
-    <Compile Include="Option.xaml.cs">
-      <DependentUpon>Option.xaml</DependentUpon>
+    <Compile Include="OptionWindow.xaml.cs">
+      <DependentUpon>OptionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Selector\SchedulerSelector.cs" />
     <Compile Include="ViewModel\SchedulerPageViewModel.cs" />
@@ -117,7 +117,7 @@
       <DependentUpon>ExToBp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Option.xaml">
+    <Page Include="OptionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
