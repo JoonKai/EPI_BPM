@@ -12,6 +12,11 @@ namespace HellsysControls.Controls.BaseControls
     /// </summary>
     public partial class EPIComboListboxSingleControl : UserControl
     {
+        public EPIComboListboxSingleControl()
+        {
+            InitializeComponent();
+            DataContext = this;
+        }
         public string RootFolder { get => @AppDomain.CurrentDomain.BaseDirectory + "\\" + FolName + "\\"; }
         public string RootFile { get => @RootFolder + "\\" + FilName + ".Json"; }
 
@@ -30,11 +35,6 @@ namespace HellsysControls.Controls.BaseControls
 
 
 
-        public EPIComboListboxSingleControl()
-        {
-            InitializeComponent();
-            DataContext = this;
-        }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             

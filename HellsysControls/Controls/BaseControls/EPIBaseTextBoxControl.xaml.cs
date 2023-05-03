@@ -39,6 +39,8 @@ namespace HellsysControls.Controls.BaseControls
 
 
 
+
+
         public new int Width
         {
             get { return (int)GetValue(WidthProperty); }
