@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace HellsysLibrary.Extensions
 {
-    public static class FindParentExtension
+    public static class FindElementExtension
     {
         public static T FindParent<T>(this DependencyObject child)
             where T : DependencyObject

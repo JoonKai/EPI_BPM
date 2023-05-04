@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="EPI_BPM.View.Screen.VendorPage"
+﻿<UserControl x:Class="EPI_BPM.View.LaoutControl.VendorControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EPI_BPM.View.Screen" xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls;assembly=HellsysControls"
+             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" 
+             xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls;assembly=HellsysControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -16,40 +17,31 @@
             <Setter Property="THeaderColor" Value="White"/>
         </Style>
     </UserControl.Resources>
-    <!--#region 좌우 스플릿-->
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="3"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <!--#region 첫번째컬럼-->
-        <Grid Grid.Column="0">
+    <!--#region 첫번째컬럼-->
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="3"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <!--#region 상단행-->
-            <Grid Grid.Row="0" Margin="2">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="1*"/>
-                        <RowDefinition Height="4*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        
-                    </Grid>
-                    <DataGrid x:Name="vendorDG" Grid.Row="1">
-                        
-                    </DataGrid>
-                </Grid>
+            <Grid Grid.Row="0">
+                <GroupBox Header="업체조회" Foreground="White" Margin="2">
+                    <DockPanel>
+                        <Grid Height="100" DockPanel.Dock="Top">
+
+                        </Grid>
+                        <DataGrid x:Name="vendorDG" DockPanel.Dock="Top">
+
+                        </DataGrid>
+                    </DockPanel>
+                </GroupBox>
             </Grid>
             <!--#endregion-->
             <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
             <!--#region 하단행-->
             <Grid Grid.Row="2">
-                <GroupBox Grid.Column="0" Margin="5" Header="업체" Foreground="White">
+                <GroupBox x:Name="vendorGroupbox" Grid.Column="0" Margin="2" Header="업체" Foreground="White">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <epi:EPITextItemControl x:Name="vendorCode" THeaderText="업체코드"/>
@@ -72,26 +64,5 @@
                     </StackPanel>
                 </GroupBox>
             </Grid>
-            <!--#endregion-->
         </Grid>
-        <!--#endregion-->
-        <GridSplitter Grid.Column="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
-        <!--#region 두번째컬럼-->
-        <Grid Grid.Column="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="3"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-
-            </Grid>
-            <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
-            <Grid Grid.Row="2">
-
-            </Grid>
-            <!--#endregion-->
-        </Grid>
-    </Grid>
-    <!--#endregion-->
 </UserControl>

@@ -95,6 +95,7 @@
     </ApplicationDefinition>
     <Compile Include="Converters\WindowStateIconConverter.cs" />
     <Compile Include="Converters\WindowStateMarginConverter.cs" />
+    <Compile Include="DB\DBManager.cs" />
     <Compile Include="Helpers\DataGridViewHelper.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Model\Currency.cs" />
@@ -108,11 +109,17 @@
     <Compile Include="View\LaoutControl\OptionTitleBar.xaml.cs">
       <DependentUpon>OptionTitleBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LaoutControl\PartsControl.xaml.cs">
+      <DependentUpon>PartsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LaoutControl\StatusBar.xaml.cs">
       <DependentUpon>StatusBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LaoutControl\TitleBar.xaml.cs">
       <DependentUpon>TitleBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LaoutControl\VendorControl.xaml.cs">
+      <DependentUpon>VendorControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -123,8 +130,8 @@
     <Compile Include="View\Screen\SettingScreen.xaml.cs">
       <DependentUpon>SettingScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Screen\VendorPage.xaml.cs">
-      <DependentUpon>VendorPage.xaml</DependentUpon>
+    <Compile Include="View\Screen\VendorAndPartsPage.xaml.cs">
+      <DependentUpon>VendorAndPartsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowMaximizeManager.cs" />
     <Page Include="ExToBp.xaml">
@@ -155,11 +162,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\LaoutControl\PartsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LaoutControl\StatusBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LaoutControl\TitleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LaoutControl\VendorControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,7 +190,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Screen\VendorPage.xaml">
+    <Page Include="View\Screen\VendorAndPartsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
