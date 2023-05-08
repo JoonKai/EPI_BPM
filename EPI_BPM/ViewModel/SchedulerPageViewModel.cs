@@ -9,7 +9,7 @@ namespace EPI_BPM.ViewModel
 {
     public class SchedulerPageViewModel : ViewModelBase
     {
-        private List<PMCategory> pmCategory = default;
+        private List<PMCategory> pmCategory;
 
         public List<PMCategory> PMCategories { get=>pmCategory; set { pmCategory = value;OnPropertyChanged();}}
 
