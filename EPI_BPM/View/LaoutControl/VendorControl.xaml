@@ -16,6 +16,10 @@
             <Setter Property="THeaderWidth" Value="60"/>
             <Setter Property="THeaderColor" Value="White"/>
         </Style>
+        <Style TargetType="DataGridCell" x:Key="Cell">
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            <Setter Property="TextBlock.FontSize" Value="11"/>
+        </Style>
     </UserControl.Resources>
     <!--#region 첫번째컬럼-->
         <Grid>
@@ -28,11 +32,66 @@
             <Grid Grid.Row="0">
                 <GroupBox Header="업체조회" Foreground="White" Margin="2">
                     <DockPanel>
-                        <Grid Height="100" DockPanel.Dock="Top">
+                        <Grid Height="0" DockPanel.Dock="Top">
 
                         </Grid>
-                        <DataGrid x:Name="vendorDG" DockPanel.Dock="Top">
+                        <DataGrid Background="{StaticResource ColorPrimary}" x:Name="vendorDG" IsReadOnly="True" CanUserResizeRows="False" DockPanel.Dock="Top" IsSynchronizedWithCurrentItem="True" SelectionUnit="Cell" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                            <DataGridTextColumn Header="업체코드" CellStyle="{StaticResource Cell}" Binding="{Binding VendorCode}">
 
+                                <DataGridTextColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TextBox Name="idTextBox" Margin="10 0 0 0" Width="50" TextChanged="idTextBox_TextChanged" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTextColumn.HeaderTemplate>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="업체명" Binding="{Binding VendorName}">
+                                    <DataGridTextColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                                <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTextColumn.HeaderTemplate>
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="담당자" Width="130">
+                                <DataGridTextColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TextBox Margin="10 0 0 0" Width="70" TextChanged="idTextBox_TextChanged" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTextColumn.HeaderTemplate>
+                            </DataGridTextColumn>
+                                <DataGridTextColumn Header="연락처" Width="160">
+                                <DataGridTextColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTextColumn.HeaderTemplate>
+                            </DataGridTextColumn>
+                                <DataGridTextColumn Header="취급품목설명" Width="200">
+                                <DataGridTextColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTextColumn.HeaderTemplate>
+                            </DataGridTextColumn>
+                                <DataGridTextColumn Header="기타" Width="200">
+
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
                         </DataGrid>
                     </DockPanel>
                 </GroupBox>
