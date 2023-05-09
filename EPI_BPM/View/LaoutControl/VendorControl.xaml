@@ -35,7 +35,7 @@
                         <Grid Height="0" DockPanel.Dock="Top">
 
                         </Grid>
-                        <DataGrid Background="{StaticResource ColorPrimary}" x:Name="vendorDG" IsReadOnly="True" CanUserResizeRows="False" DockPanel.Dock="Top" IsSynchronizedWithCurrentItem="True" SelectionUnit="Cell" AutoGenerateColumns="False">
+                        <DataGrid Background="{StaticResource ColorPrimary}" x:Name="vendorDG" CanUserAddRows="False" IsReadOnly="True" CanUserResizeRows="False" DockPanel.Dock="Top" IsSynchronizedWithCurrentItem="True" SelectionUnit="Cell" AutoGenerateColumns="False">
                             <DataGrid.Columns>
                             <DataGridTextColumn Header="업체코드" CellStyle="{StaticResource Cell}" Binding="{Binding VendorCode}">
 
