@@ -23,15 +23,15 @@
         </Style>
     </UserControl.Resources>
     <DockPanel x:Name="pnlTitle" Background="{StaticResource ColorPrimary}" LastChildFill="False">
-        <TextBlock Text="BPM File Maker" Foreground="DarkOrange" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
+        <TextBlock Text="EPI" Foreground="LightSteelBlue" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
         <Button x:Name="btnExit" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter},ConverterParameter=Exit}">
-            <fa6:SvgAwesome Icon="Solid_Xmark"/>
+            <fa6:SvgAwesome Icon="Solid_Xmark" PrimaryColor="Yellow"/>
         </Button>
         <Button x:Name="btnMaximize" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter}}">
-            <fa6:SvgAwesome Icon="Regular_Square" Width="13" Height="13"/>
+            <fa6:SvgAwesome Icon="Regular_Square" Width="13" Height="13" PrimaryColor="Blue"/>
         </Button>
         <Button x:Name="btnMinimize" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter}}">
-            <fa6:SvgAwesome Icon="Solid_Minus"/>
+            <fa6:SvgAwesome Icon="Solid_Minus" PrimaryColor="Red"/>
         </Button>
     </DockPanel>
 </UserControl>

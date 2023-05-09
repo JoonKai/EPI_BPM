@@ -122,6 +122,12 @@
     <Compile Include="View\LaoutControl\VendorControl.xaml.cs">
       <DependentUpon>VendorControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Screen\BPMPage.xaml.cs">
+      <DependentUpon>BPMPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screen\MacroPage.xaml.cs">
+      <DependentUpon>MacroPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Screen\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
     <Compile Include="View\Screen\SettingScreen.xaml.cs">
       <DependentUpon>SettingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screen\ShorcutPage.xaml.cs">
+      <DependentUpon>ShorcutPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\VendorAndPartsPage.xaml.cs">
       <DependentUpon>VendorAndPartsPage.xaml</DependentUpon>
@@ -179,6 +188,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Screen\BPMPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Screen\MacroPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Screen\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -188,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Screen\SettingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Screen\ShorcutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

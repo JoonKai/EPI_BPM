@@ -20,7 +20,7 @@
     <!--#region 첫번째컬럼-->
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="3"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
@@ -41,7 +41,7 @@
         <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
         <!--#region 하단행-->
         <Grid Grid.Row="2">
-            <GroupBox Grid.Column="0" Margin="2" Header="업체" Foreground="White">
+            <GroupBox Grid.Column="0" Margin="2" Header="자재" Foreground="White">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <epi:EPITextItemControl THeaderText="자재번호"/>
