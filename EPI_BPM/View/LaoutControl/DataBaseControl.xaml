@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="EPI_BPM.View.LaoutControl.DataBaseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" xmlns:epicontrols="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="SQLite Setting" Foreground="DarkOrange" Grid.Column="0" Margin="5">
+            <StackPanel>
+                <epicontrols:EPIFolderOpenControl Height="23" THeaderText="DB경로"  THeaderColor="White" TBColor="White" TBWidth="150"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="기타" Foreground="DarkOrange" Grid.Column="1" Margin="5">
+            <StackPanel>
+
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

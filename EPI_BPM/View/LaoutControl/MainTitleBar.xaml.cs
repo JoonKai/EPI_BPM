@@ -8,7 +8,7 @@ namespace EPI_BPM.View.LaoutControl
     /// <summary>
     /// TitleBar.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class TitleBar : UserControl
+    public partial class MainTitleBar : UserControl
     {
         private Window _parentWindow;
 
@@ -26,7 +26,7 @@ namespace EPI_BPM.View.LaoutControl
             set { _parentWindow = value; }
         }
 
-        public TitleBar()
+        public MainTitleBar()
         {
             InitializeComponent();
             btnExit.Click += BtnExit_Click;

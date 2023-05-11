@@ -19,9 +19,9 @@ namespace EPI_BPM.View.LaoutControl
     /// <summary>
     /// OptionTitleBar.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class OptionTitleBar : UserControl
+    public partial class SettingsTitleBar : UserControl
     {
-        public OptionTitleBar()
+        public SettingsTitleBar()
         {
             InitializeComponent();
             btnExit.Click += BtnExit_Click;
