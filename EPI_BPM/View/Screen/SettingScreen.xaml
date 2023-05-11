@@ -23,8 +23,9 @@
             <TabItem Header="일반" Margin="-3 0 0 0">
             </TabItem>
             <!--#endregion-->
-            <!--#region SettingTab 업체등록-->
-            <TabItem Header="업체등록">
+            <!--#region SettingTab DataBase-->
+            <TabItem Header="DataBase">
+                
             </TabItem>
             <!--#endregion-->
             <!--#region SettingTab -->

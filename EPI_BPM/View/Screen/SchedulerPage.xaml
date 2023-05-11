@@ -110,18 +110,17 @@
         <Grid Grid.Row="0"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="23"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="3"/>
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="{StaticResource ColorOrange}">
+            <!--<DataGrid Grid.Row="0" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}">
                 
-            </Grid>
-            <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}" >
+            </DataGrid>-->
+            <ListBox Grid.Row="0" Background="Transparent" ItemsSource="{Binding PMCategories}" ItemTemplateSelector="{StaticResource ItemSelector}" >
             </ListBox>
-            <GridSplitter Grid.Row="2" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
-            <Grid Grid.Row="3">
+            <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
+            <Grid Grid.Row="2">
                 
             </Grid>
         </Grid>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EPI_BPM.View.LaoutControl
+namespace EPI_BPM.Model
 {
     public class Vendor
     {

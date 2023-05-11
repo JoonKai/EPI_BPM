@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <Style TargetType="{x:Type epi:EPITextItemControl}">
-            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontSize" Value="11"/>
             <Setter Property="TBWidth" Value="160"/>
             <Setter Property="TBHeight" Value="20"/>
             <Setter Property="TBColor" Value="White"/>
@@ -101,7 +101,7 @@
             <!--#region 하단행-->
             <Grid Grid.Row="2">
                 <GroupBox x:Name="vendorGroupbox" Grid.Column="0" Margin="2" Header="업체" Foreground="White">
-                    <StackPanel>
+                    <StackPanel Margin="5">
                         <StackPanel Orientation="Horizontal">
                             <epi:EPITextItemControl x:Name="vendorCode" THeaderText="업체코드"/>
                             <Button x:Name="vendorAdd" Click="vendorAdd_Click" Height="23" Width="100" Content="추가" Style="{StaticResource EPIButton1}"/>
