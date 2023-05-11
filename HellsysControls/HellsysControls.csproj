@@ -50,37 +50,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\ComboBoxColorManager.cs" />
-    <Compile Include="Controls\BaseControls\EPIBaseTextBoxControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIBaseTextBoxControl.xaml.cs">
       <DependentUpon>EPIBaseTextBoxControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIComboListboxSingleControl.xaml.cs">
       <DependentUpon>EPIComboListboxSingleControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPIComboListViewTwoColumnControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIComboListViewTwoColumnControl.xaml.cs">
       <DependentUpon>EPIComboListViewTwoColumnControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPIComboTextBoxControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIComboTextBoxControl.xaml.cs">
       <DependentUpon>EPIComboTextBoxControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPIFileOpenControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIFileOpenControl.xaml.cs">
       <DependentUpon>EPIFileOpenControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPINumericUpDownControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPINumericUpDownControl.xaml.cs">
       <DependentUpon>EPINumericUpDownControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPISearchComboTwoItemsListBoxControl.xaml.cs">
       <DependentUpon>EPISearchComboTwoItemsListBoxControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\BaseControls\TankControl\EPITank1.xaml.cs">
       <DependentUpon>EPITank1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPITextItemControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPITextItemControl.xaml.cs">
       <DependentUpon>EPITextItemControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPITextNumericUpDownItemControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPITextNumericUpDownItemControl.xaml.cs">
       <DependentUpon>EPITextNumericUpDownItemControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml.cs">
+    <Compile Include="Controls\BaseControls\EPIControls\EPIWaterMarkTextboxControl.xaml.cs">
       <DependentUpon>EPIWaterMarkTextboxControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\BaseControls\TankControl\EPITank2.xaml.cs">
@@ -115,31 +115,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\BaseControls\EPIBaseTextBoxControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIBaseTextBoxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPIComboListboxSingleControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIComboListboxSingleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPIComboListViewTwoColumnControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIComboListViewTwoColumnControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPIComboTextBoxControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIComboTextBoxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPIFileOpenControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIFileOpenControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPINumericUpDownControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPINumericUpDownControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPISearchComboTwoItemsListBoxControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPISearchComboTwoItemsListBoxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,15 +147,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPITextItemControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPITextItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPITextNumericUpDownItemControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPITextNumericUpDownItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BaseControls\EPIWaterMarkTextboxControl.xaml">
+    <Page Include="Controls\BaseControls\EPIControls\EPIWaterMarkTextboxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

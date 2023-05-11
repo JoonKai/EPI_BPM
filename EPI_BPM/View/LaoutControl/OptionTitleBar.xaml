@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" xmlns:converters="clr-namespace:EPI_BPM.Converters" xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" 
+             xmlns:converters="clr-namespace:EPI_BPM.Converters" xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
              mc:Ignorable="d" x:Name="root" >
     <UserControl.Resources>
         <Style TargetType="{x:Type Button}">

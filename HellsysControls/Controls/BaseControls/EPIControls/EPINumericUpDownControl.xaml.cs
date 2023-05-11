@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace HellsysControls.Controls.BaseControls
+namespace HellsysControls.Controls.BaseControls.EPIControls
 {
     /// <summary>
     /// EPINumericUpDownControl.xaml에 대한 상호 작용 논리

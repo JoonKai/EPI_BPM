@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:win="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
-             xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls;assembly=HellsysControls"
+             xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
              xmlns:ex="clr-namespace:HellsysLibrary.Extensions;assembly=HellsysLibrary"
              xmlns:en="clr-namespace:EPI_BPM.Model"
              xmlns:local="clr-namespace:EPI_BPM.View.Screen" 
