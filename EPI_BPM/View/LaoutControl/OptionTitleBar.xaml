@@ -20,7 +20,8 @@
         </Style>
     </UserControl.Resources>
     <DockPanel x:Name="pnlTitle" Background="{StaticResource ColorDarkGray}" LastChildFill="False">
-        <TextBlock Text="옵션" Foreground="DarkOrange" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
+        <fa6:ImageAwesome Margin="5 0 0 0" Icon="Brands_Bitcoin" PrimaryColor="White" Width="17" Height="17"/>
+        <TextBlock Text="Settings" Foreground="DarkOrange" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
         <Button x:Name="btnExit">
             <fa6:SvgAwesome Icon="Solid_Xmark"/>
         </Button>

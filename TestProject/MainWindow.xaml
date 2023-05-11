@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProject"
         xmlns:win="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
-        xmlns:source="clr-namespace:SourceGrid2;assembly=SourceGrid2"
+        xmlns:source="clr-namespace:SourceGrid2;assembly=SourceGrid2" xmlns:epicontrols="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <WindowsFormsHost>
-            <!--<source:DataGrid x:Name="grd"/>-->
-            <source:Grid x:Name="grd"/>
-        </WindowsFormsHost>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="23"/>
+        </Grid.RowDefinitions>
+        <epicontrols:EPIFolderOpenControl TBWidth="200" Grid.Row="0" Grid.Column="0"/>
     </Grid>
 </Window>

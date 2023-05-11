@@ -102,5 +102,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HellsysControls\HellsysControls.csproj">
+      <Project>{f2811b98-9d0e-44a7-aecf-b7f48afd4818}</Project>
+      <Name>HellsysControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HellsysLibrary\HellsysLibrary.csproj">
+      <Project>{d99530e7-576f-4bfe-a92f-324b2a8dd625}</Project>
+      <Name>HellsysLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

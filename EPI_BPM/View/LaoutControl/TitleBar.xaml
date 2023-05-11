@@ -23,7 +23,8 @@
         </Style>
     </UserControl.Resources>
     <DockPanel x:Name="pnlTitle" Background="{StaticResource ColorPrimary}" LastChildFill="False">
-        <TextBlock Text="EPI Helper" Foreground="White" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
+        <fa6:ImageAwesome Margin="5 0 0 0" Icon="Brands_Bitcoin" PrimaryColor="White" Width="15" Height="15"/>
+        <TextBlock Text="EPI Helper" Foreground="DarkOrange" FontWeight="Bold" FontSize="13" Margin="5 0 0 0 "/>
         <Button x:Name="btnExit" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter},ConverterParameter=Exit}">
             <fa6:SvgAwesome Icon="Solid_Xmark" PrimaryColor="Yellow"/>
         </Button>
