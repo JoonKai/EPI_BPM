@@ -146,7 +146,7 @@
       <DependentUpon>VendorAndPartsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowMaximizeManager.cs" />
-    <Page Include="ExToBp.xaml">
+    <Page Include="EPIMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -154,8 +154,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ExToBp.xaml.cs">
-      <DependentUpon>ExToBp.xaml</DependentUpon>
+    <Compile Include="EPIMainWindow.xaml.cs">
+      <DependentUpon>EPIMainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OptionWindow.xaml">
