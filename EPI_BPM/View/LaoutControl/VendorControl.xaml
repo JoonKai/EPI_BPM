@@ -20,6 +20,10 @@
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
             <Setter Property="TextBlock.FontSize" Value="11"/>
         </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+        </Style>
     </UserControl.Resources>
     <!--#region 첫번째컬럼-->
         <Grid>
@@ -103,7 +107,7 @@
                 <GroupBox x:Name="vendorGroupbox" Grid.Column="0" Margin="2" Header="업체" Foreground="White">
                     <StackPanel Margin="5">
                         <StackPanel Orientation="Horizontal">
-                            <epi:EPITextItemControl x:Name="vendorCode" THeaderText="업체코드"/>
+                            <epi:EPITextItemControl x:Name="vendorCode" TBText="{Binding ElementName=vendorDG, Path=SelectedItem.VendorCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" WaterText="손준석" THeaderText="업체코드"/>
                             <Button x:Name="vendorAdd" Click="vendorAdd_Click" Height="23" Width="100" Content="추가" Style="{StaticResource EPIButton1}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">

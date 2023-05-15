@@ -29,7 +29,7 @@
             <fa6:SvgAwesome Icon="Solid_Xmark" PrimaryColor="Yellow"/>
         </Button>
         <Button x:Name="btnMaximize" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter}}">
-            <fa6:SvgAwesome Icon="Regular_Square" Width="13" Height="13" PrimaryColor="DarkOrange"/>
+            <fa6:SvgAwesome Icon="Regular_Square" Width="13" Height="13" PrimaryColor="LightBlue"/>
         </Button>
         <Button x:Name="btnMinimize" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter}}">
             <fa6:SvgAwesome Icon="Solid_Minus" PrimaryColor="Red"/>

@@ -71,7 +71,7 @@
                 <GroupBox Header="Default" >
                     <ScrollViewer>
                         <StackPanel Orientation="Vertical" Margin="10">
-                            <epi:EPITextItemControl HorizontalContentAlignment="Center" THeaderText="NO" ItemText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
+                            <epi:EPITextItemControl HorizontalContentAlignment="Center" THeaderText="NO" TBText="1" THeaderWidth="70" TBWidth="50" TBReadOnly="True"/>
                             <epi:EPITextNumericUpDownItemControl THeaderText="현재고" THeaderWidth="70" TBWidth="50"/>
                             <epi:EPITextNumericUpDownItemControl THeaderText="안전재고" THeaderWidth="70" TBWidth="50"/>
                             <epi:EPITextNumericUpDownItemControl THeaderText="연간구매수량" THeaderWidth="70" TBWidth="50"/>
@@ -87,8 +87,8 @@
                 <GroupBox Header="업체항목">
                     <ScrollViewer>
                         <StackPanel Orientation="Vertical" Margin="10">
-                            <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100" ItemText="EPI설비기술LT" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
-                            <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100" ItemText="252203" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
+                            <epi:EPITextItemControl THeaderText="요청팀" THeaderWidth="70" TBWidth="100" TBText="EPI설비기술LT" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
+                            <epi:EPITextItemControl THeaderText="코스트센터" THeaderWidth="70" TBWidth="100" TBText="252203" THeaderColor="{StaticResource ColorWhite}" TBColor="White" TSemiColonColor="White"/>
                             <epi:EPITextItemControl THeaderText="구매사유" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                             <epi:EPITextItemControl THeaderText="업체코드" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                             <epi:EPITextItemControl THeaderText="업체명" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
@@ -147,7 +147,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
-                    <epi:EPITextItemControl ItemText="3,000,000" TBColor="DarkOrange" THeaderText="합계" TBReadOnly="True" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
+                    <epi:EPITextItemControl TBText="3,000,000" TBColor="DarkOrange" THeaderText="합계" TBReadOnly="True" THeaderWidth="70" TBWidth="100" THeaderColor="{StaticResource ColorWhite}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1" Margin="5">

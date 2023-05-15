@@ -16,6 +16,10 @@
             <Setter Property="THeaderWidth" Value="60"/>
             <Setter Property="THeaderColor" Value="White"/>
         </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+        </Style>
     </UserControl.Resources>
     <!--#region 첫번째컬럼-->
     <Grid>

@@ -21,6 +21,8 @@
         <Style TargetType="{x:Type local:EPIWaterMarkTextboxControl}">
             <Setter Property="Height" Value="{Binding TBHeight, ElementName=root}"/>
             <Setter Property="Width" Value="{Binding TBWidth, ElementName=root}"/>
+            <Setter Property="WaterMarkText" Value="{Binding WaterText, ElementName=root}"/>
+            <Setter Property="Text" Value="{Binding TBText, ElementName=root}"/>
             <Setter Property="Margin" Value="1"/>
             <Setter Property="TBTextColor" Value="{Binding TBColor, ElementName=root}"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -33,6 +35,6 @@
     <StackPanel Orientation="Horizontal" Margin="2">
         <TextBlock Style="{DynamicResource THeader}" />
         <TextBlock Text=":" Margin="5,0" Style="{StaticResource TColon}"/>
-        <local:EPIWaterMarkTextboxControl Text="{Binding ItemText, ElementName=root}"/>
+        <local:EPIWaterMarkTextboxControl/>
     </StackPanel>
 </UserControl>

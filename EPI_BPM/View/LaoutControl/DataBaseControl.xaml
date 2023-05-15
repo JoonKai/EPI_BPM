@@ -6,6 +6,12 @@
              xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" xmlns:epicontrols="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="600">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
+            <Setter Property="BorderThickness" Value="0.2"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>

@@ -24,7 +24,8 @@ namespace HellsysControls.Controls.BaseControls.EPIControls
         public static readonly DependencyProperty THeaderTextProperty = DependencyProperty.Register("THeaderText", typeof(string), typeof(EPITextItemControl), new PropertyMetadata(null));
         public static readonly DependencyProperty THeaderWidthProperty = DependencyProperty.Register("THeaderWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
         public static readonly DependencyProperty THeaderColorProperty = DependencyProperty.Register("THeaderColor", typeof(Brush), typeof(EPITextItemControl), new PropertyMetadata(Brushes.Black));
-        public static readonly DependencyProperty ItemTextProperty =DependencyProperty.Register("ItemText", typeof(string), typeof(EPITextItemControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        public static readonly DependencyProperty TBTextProperty =DependencyProperty.Register("TBText", typeof(string), typeof(EPITextItemControl), new FrameworkPropertyMetadata("",FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        public static readonly DependencyProperty WaterTextProperty = DependencyProperty.Register("WaterText", typeof(string), typeof(EPITextItemControl), new FrameworkPropertyMetadata("", FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty TBColorProperty = DependencyProperty.Register("TBColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TSemiColonColorProperty =  DependencyProperty.Register("TSemiColonColor", typeof(Brush), typeof(EPITextItemControl), new UIPropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty TBReadOnlyProperty = DependencyProperty.Register("TBReadOnly", typeof(bool), typeof(EPITextItemControl), new PropertyMetadata(false));
@@ -34,6 +35,15 @@ namespace HellsysControls.Controls.BaseControls.EPIControls
         public static readonly DependencyProperty TBHeightProperty = DependencyProperty.Register("TBHeight", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(20));
         public static readonly DependencyProperty TBWidthProperty = DependencyProperty.Register("TBWidth", typeof(int), typeof(EPITextItemControl), new PropertyMetadata(50));
 
+
+
+
+
+        public string WaterText
+        {
+            get { return (string)GetValue(WaterTextProperty); }
+            set { SetValue(WaterTextProperty, value); }
+        }
 
 
 
@@ -95,10 +105,10 @@ namespace HellsysControls.Controls.BaseControls.EPIControls
             set { SetValue(THeaderWidthProperty, value); }
         }
         
-        public string ItemText
+        public string TBText
         {
-            get { return (string)GetValue(ItemTextProperty); }
-            set { SetValue(ItemTextProperty, value); }
+            get { return (string)GetValue(TBTextProperty); }
+            set { SetValue(TBTextProperty, value); }
         }
 
 
