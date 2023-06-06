@@ -32,7 +32,7 @@
             <fa6:SvgAwesome Icon="Regular_Square" Width="13" Height="13" PrimaryColor="LightBlue"/>
         </Button>
         <Button x:Name="btnMinimize" Margin="{Binding WinState, ElementName=root, Converter={StaticResource WindowStateMarginConverter}}">
-            <fa6:SvgAwesome Icon="Solid_Minus" PrimaryColor="Red"/>
+            <fa6:SvgAwesome Icon="Solid_Minus" PrimaryColor="Red" Margin="-2 3 -2 -5"/>
         </Button>
     </DockPanel>
 </UserControl>
