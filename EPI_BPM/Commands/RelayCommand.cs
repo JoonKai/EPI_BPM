@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace EPI_BPM.ViewModel
+namespace EPI_BPM.Commands
 {
     public class RelayCommand<T> : ICommand
     {

@@ -7,7 +7,7 @@
         xmlns:ti="clr-namespace:EPI_BPM.View.LaoutControl"
         xmlns:local="clr-namespace:EPI_BPM"
         mc:Ignorable="d"
-        Title="옵션" WindowStartupLocation="CenterOwner" WindowStyle="None" Height="400" Width="600" MinWidth="600" MinHeight="400" ResizeMode="NoResize">
+        Title="옵션" WindowStartupLocation="CenterOwner" WindowStyle="None" Height="500" Width="700" MinWidth="600" MinHeight="400" ResizeMode="NoResize">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" ResizeBorderThickness="2"/>
     </WindowChrome.WindowChrome>

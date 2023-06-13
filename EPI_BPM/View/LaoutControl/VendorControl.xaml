@@ -26,6 +26,7 @@
             <Setter Property="HeadersVisibility" Value="Column"/>
             <Setter Property="VerticalGridLinesBrush" Value="{StaticResource ColorOrange}"/>
             <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource ColorWhite}"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
         </Style>
         <Style TargetType="{x:Type epi:EPITextItemControl}" BasedOn="{StaticResource Base}">
             <Setter Property="TBWidth" Value="160"/>
@@ -40,7 +41,8 @@
         </Style>
         <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource Base}">
             <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
-            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="BorderThickness" Value="0.3"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
     </UserControl.Resources>
     <!--#region 첫번째컬럼-->
@@ -52,7 +54,7 @@
             </Grid.RowDefinitions>
             <!--#region 상단행-->
             <Grid Grid.Row="0">
-                <GroupBox Header="업체조회" Foreground="White" Margin="2">
+                <GroupBox Header="업체조회" Foreground="White">
                     <DockPanel>
                         <Grid Height="0" DockPanel.Dock="Top">
 
@@ -130,8 +132,8 @@
             <GridSplitter Grid.Row="1" Background="{StaticResource ColorOrange}" HorizontalAlignment="Stretch"/>
             <!--#region 하단행-->
             <Grid Grid.Row="2">
-                <GroupBox x:Name="vendorGroupbox" Grid.Column="0" Margin="2" Header="업체" Foreground="White">
-                    <StackPanel Margin="5">
+                <GroupBox x:Name="vendorGroupbox" Grid.Column="0" Header="업체등록" Foreground="White">
+                    <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <epi:EPITextItemControl x:Name="vendorCode" TBText="{Binding ElementName=vendorDG, Path=SelectedItem.VendorCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" WaterText="손준석" THeaderText="업체코드"/>
                             <Button x:Name="vendorAdd" Click="vendorAdd_Click" Height="23" Width="100" Content="추가" Style="{StaticResource EPIButton1}"/>

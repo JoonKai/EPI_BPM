@@ -1,4 +1,5 @@
 ﻿using EPI_BPM.Helpers;
+using EPI_BPM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
@@ -13,6 +14,11 @@ namespace EPI_BPM.View.Screen
         public MainPage()
         {
             InitializeComponent();
+            MainPageViewModel viewModel = new MainPageViewModel();
+            this.DataContext = viewModel;
+
+
+
             AddDataGridColumns();
             InitializeDataGridView();
         }

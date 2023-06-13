@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
         <laoutcontrol:MainTitleBar Grid.Row="0"/>
         <Grid Grid.Row="1" Background="{StaticResource ColorOrange}"/>
-        <Main:MainPage Grid.Row="2" Background="Transparent"/>
+        <Main:MainPage Grid.Row="2" Background="Transparent" FontSize="12"/>
         <Grid Grid.Row="3" Background="{StaticResource ColorOrange}"/>
         <laoutcontrol:StatusBar Grid.Row="4"/>
     </Grid>

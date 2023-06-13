@@ -110,7 +110,9 @@
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Selector\SchedulerSelector.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\MeasurementViewModel.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="ViewModel\SchedulerPageViewModel.cs" />
     <Compile Include="ViewModel\VendorControlViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
@@ -143,8 +145,8 @@
     <Compile Include="View\Screen\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Screen\MesurementPage.xaml.cs">
-      <DependentUpon>MesurementPage.xaml</DependentUpon>
+    <Compile Include="View\Screen\MeasurementPage.xaml.cs">
+      <DependentUpon>MeasurementPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\SchedulerPage.xaml.cs">
       <DependentUpon>SchedulerPage.xaml</DependentUpon>
@@ -219,7 +221,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Screen\MesurementPage.xaml">
+    <Page Include="View\Screen\MeasurementPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

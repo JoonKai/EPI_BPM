@@ -18,9 +18,9 @@ namespace EPI_BPM.View.Screen
     /// <summary>
     /// MesurementPage.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MesurementPage : UserControl
+    public partial class MeasurementPage : UserControl
     {
-        public MesurementPage()
+        public MeasurementPage()
         {
             InitializeComponent();
         }

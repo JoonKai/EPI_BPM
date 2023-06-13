@@ -31,7 +31,7 @@
         <Menu Grid.Row="0" Background="Transparent">
             <MenuItem Header="파일"/>
             <MenuItem Header="환경설정">
-                <MenuItem x:Name="OptionOpen" Click="OptionOpen_Click" Header="옵션" Foreground="Black" FontWeight="Light"/>
+                <MenuItem x:Name="OptionOpen" CommandParameter="{x:Reference Name=root}" Command="{Binding ShowSettingViewCommand}" Header="옵션" Foreground="Black" FontWeight="Light"/>
             </MenuItem>
             <MenuItem Header="기타"/>
         </Menu>
@@ -39,7 +39,7 @@
         <!--#region 카테고리-->
         <TabControl Grid.Row="2" Background="Transparent" Margin="2">
             <TabItem Header="측정설비">
-                <local:MesurementPage/>
+                <local:MeasurementPage/>
             </TabItem>
             <TabItem Header="BPM">
                 <local:BPMPage/>
@@ -49,6 +49,12 @@
             </TabItem>
             <TabItem Header="업체등록 및 조회">
                 <local:VendorAndPartsPage/>
+            </TabItem>
+            <TabItem Header="구매내역">
+                
+            </TabItem>
+            <TabItem Header="펌프수리이력">
+                
             </TabItem>
             <TabItem Header="바로가기">
                 <local:ShorcutPage/>
