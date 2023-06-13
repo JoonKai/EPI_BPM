@@ -6,10 +6,28 @@
              xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" 
              xmlns:epi="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" x:Name="root">
     <UserControl.Resources>
-        <Style TargetType="{x:Type epi:EPITextItemControl}">
-            <Setter Property="FontSize" Value="11"/>
+        <Style x:Key="Base" TargetType="{x:Type FrameworkElement}">
+            <Setter Property="Control.FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource Base}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="CanUserResizeColumns" Value="False"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="RowBackground" Value="Transparent"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="SelectionUnit" Value="Cell"/>
+            <Setter Property="FrozenColumnCount" Value="2"/>
+            <Setter Property="IsSynchronizedWithCurrentItem" Value="False"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="VerticalGridLinesBrush" Value="{StaticResource ColorOrange}"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource ColorWhite}"/>
+        </Style>
+        <Style TargetType="{x:Type epi:EPITextItemControl}" BasedOn="{StaticResource Base}">
             <Setter Property="TBWidth" Value="160"/>
             <Setter Property="TBHeight" Value="20"/>
             <Setter Property="TBColor" Value="White"/>
@@ -20,7 +38,7 @@
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
             <Setter Property="TextBlock.FontSize" Value="11"/>
         </Style>
-        <Style TargetType="{x:Type GroupBox}">
+        <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource Base}">
             <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
             <Setter Property="BorderThickness" Value="0.5"/>
         </Style>
@@ -40,73 +58,69 @@
 
                         </Grid>
                         <DataGrid x:Name="vendorDG"
-                                  Background="Transparent"
-                                  HorizontalGridLinesBrush="{StaticResource ColorOrange}"
-                                  VerticalGridLinesBrush="{StaticResource ColorWhite}"
-                                  RowBackground="Transparent"
-                                  AlternatingRowBackground="Gray"
-                                  CanUserAddRows="False" 
-                                  IsReadOnly="True" 
-                                  CanUserResizeRows="False" 
-                                  DockPanel.Dock="Top" 
-                                  IsSynchronizedWithCurrentItem="True" 
-                                  SelectionUnit="Cell" 
-                                  AutoGenerateColumns="False">
+                                  ItemsSource="{Binding Vendors}"
+                                  DockPanel.Dock="Top">
                             <DataGrid.Columns>
-                            <DataGridTextColumn Header="업체코드" CellStyle="{StaticResource Cell}" Binding="{Binding VendorCode}">
-
+                            <DataGridTextColumn Header="업체코드" Foreground="{StaticResource ColorOrange}" FontWeight="Bold" CellStyle="{StaticResource Cell}" Binding="{Binding VendorCode}">
                                 <DataGridTextColumn.HeaderTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                            <TextBox Name="idTextBox" Margin="10 0 0 0" Width="50" TextChanged="idTextBox_TextChanged" />
+                                            <TextBox Name="VendorCode_txt" Margin="10 0 0 0" Width="50" TextChanged="idTextBox_TextChanged" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTextColumn.HeaderTemplate>
                             </DataGridTextColumn>
-                            <DataGridTextColumn Header="업체명" Binding="{Binding VendorName}">
+                            <DataGridTextColumn Header="업체명" Foreground="{StaticResource ColorWhite}" Binding="{Binding VendorName}">
                                     <DataGridTextColumn.HeaderTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                                <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                                <TextBox Name="VendorName_txt" Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
                                             </StackPanel>
                                         </DataTemplate>
                                     </DataGridTextColumn.HeaderTemplate>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Header="담당자" Width="130">
+                                <DataGridTextColumn Header="담당자" Foreground="{StaticResource ColorWhite}" Width="130" Binding="{Binding VendorPerson}">
                                 <DataGridTextColumn.HeaderTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                            <TextBox Margin="10 0 0 0" Width="70" TextChanged="idTextBox_TextChanged" />
+                                            <TextBox Name="VendorPerson_txt" Margin="10 0 0 0" Width="70" TextChanged="idTextBox_TextChanged" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTextColumn.HeaderTemplate>
                             </DataGridTextColumn>
-                                <DataGridTextColumn Header="연락처" Width="160">
+                                <DataGridTextColumn Header="연락처" Foreground="{StaticResource ColorWhite}" Width="160" Binding="{Binding VendorPersonCellPhone}">
                                 <DataGridTextColumn.HeaderTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                            <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                            <TextBox Name="VendorPersonCellPhone_txt" Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTextColumn.HeaderTemplate>
                             </DataGridTextColumn>
-                                <DataGridTextColumn Header="취급품목설명" Width="200">
+                                <DataGridTextColumn Header="취급품목설명" Foreground="{StaticResource ColorWhite}" Width="200" Binding="{Binding VendorProduct}">
                                 <DataGridTextColumn.HeaderTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                            <TextBox Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
+                                            <TextBox Name="VendorProduct_txt" Margin="10 0 0 0" Width="100" TextChanged="idTextBox_TextChanged" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTextColumn.HeaderTemplate>
                             </DataGridTextColumn>
-                                <DataGridTextColumn Header="기타" Width="200">
-
-                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="기타" Foreground="{StaticResource ColorWhite}" Width="500" Binding="{Binding VendorNote}">
+                                <DataGridTextColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TextBox Name="VendorNote_txt" Margin="10 0 0 0" Width="300" TextChanged="idTextBox_TextChanged" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTextColumn.HeaderTemplate>
+                            </DataGridTextColumn>
                             </DataGrid.Columns>
                         </DataGrid>
                     </DockPanel>

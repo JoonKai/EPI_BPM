@@ -1,4 +1,5 @@
 ﻿using EPI_BPM.Model;
+using EPI_BPM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,9 +31,8 @@ namespace EPI_BPM.View.LaoutControl
 
         private void VendorControl_Loaded(object sender, RoutedEventArgs e)
         {
-            VendorManager collection = new VendorManager();
-
-            this.vendorDG.ItemsSource = collection;
+            VendorControlViewModel vendorControlViewModel = new VendorControlViewModel();
+            this.DataContext = vendorControlViewModel;
         }
 
         private void vendorAdd_Click(object sender, RoutedEventArgs e)
@@ -73,14 +73,22 @@ namespace EPI_BPM.View.LaoutControl
                 {
                     Vendor vendor = item as Vendor;
 
-                    if (textBox.Name == "idTextBox")
+                    switch (textBox.Name)
                     {
-                        return (vendor.VendorCode.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorCode_txt":
+                            return (vendor.VendorCode.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorName_txt":
+                            return (vendor.VendorName.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorPerson_txt":
+                            return (vendor.VendorPerson.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorPersonCellPhone_txt":
+                            return (vendor.VendorPersonCellPhone.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorProduct_txt":
+                            return (vendor.VendorProduct.ToUpper().Contains(filter.ToUpper()));
+                        case "VendorNote_txt":
+                            return (vendor.VendorNote.ToUpper().Contains(filter.ToUpper()));
                     }
-                    else
-                    {
-                        return (vendor.VendorName.ToUpper().Contains(filter.ToUpper()));
-                    }
+                    return (vendor.VendorCode.ToUpper().Contains(filter.ToUpper()));
                 };
             }
         }
