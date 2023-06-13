@@ -117,7 +117,7 @@
       <DependentUpon>PartsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Vendor.cs" />
-    <Compile Include="Model\VendorCollection.cs" />
+    <Compile Include="Model\VendorManager.cs" />
     <Compile Include="View\LaoutControl\StatusBar.xaml.cs">
       <DependentUpon>StatusBar.xaml</DependentUpon>
     </Compile>

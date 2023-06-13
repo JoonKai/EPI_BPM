@@ -30,7 +30,7 @@ namespace EPI_BPM.View.LaoutControl
 
         private void VendorControl_Loaded(object sender, RoutedEventArgs e)
         {
-            VendorCollection collection = new VendorCollection();
+            VendorManager collection = new VendorManager();
 
             this.vendorDG.ItemsSource = collection;
         }
