@@ -39,7 +39,7 @@
         <!--#region 카테고리-->
         <TabControl Grid.Row="2" Background="Transparent" Margin="2">
             <TabItem Header="측정설비">
-                
+                <local:MesurementPage/>
             </TabItem>
             <TabItem Header="BPM">
                 <local:BPMPage/>
