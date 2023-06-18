@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPI_BPM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace EPI_BPM.View.LaoutControl
         public DataBaseControl()
         {
             InitializeComponent();
+            this.DataContext = new SettingScreenPageViewModel();
         }
     }
 }

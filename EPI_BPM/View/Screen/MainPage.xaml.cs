@@ -16,13 +16,10 @@ namespace EPI_BPM.View.Screen
             InitializeComponent();
             MainPageViewModel viewModel = new MainPageViewModel();
             this.DataContext = viewModel;
-
-
-
-            AddDataGridColumns();
-            InitializeDataGridView();
         }
 
+
+        #region 삭제할 메서드
         private void InitializeDataGridView()
         {
             //ExcelDataGrid.BackgroundColor = System.Drawing.Color.White;
@@ -94,11 +91,6 @@ namespace EPI_BPM.View.Screen
             //}
 
         }
-
-        private void OptionOpen_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            SettingWindow ow = new SettingWindow();
-            ow.ShowDialog();
-        }
+        #endregion
     }
 }

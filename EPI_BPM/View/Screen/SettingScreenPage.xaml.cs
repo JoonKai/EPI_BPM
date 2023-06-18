@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPI_BPM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,13 @@ namespace EPI_BPM.View.Screen
     /// <summary>
     /// SettingScreen.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class SettingScreen : UserControl
+    public partial class SettingScreenPage : UserControl
     {
-        public SettingScreen()
+        public SettingScreenPage()
         {
             InitializeComponent();
+            SettingScreenPageViewModel viewModel = new SettingScreenPageViewModel();
+            this.DataContext = viewModel;
         }
     }
 }

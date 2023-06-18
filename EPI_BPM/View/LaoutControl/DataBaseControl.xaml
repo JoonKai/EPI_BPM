@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" xmlns:epicontrols="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls"
+             xmlns:local="clr-namespace:EPI_BPM.View.LaoutControl" 
+             xmlns:epicontrols="clr-namespace:HellsysControls.Controls.BaseControls.EPIControls;assembly=HellsysControls" 
+             xmlns:viewmodel="clr-namespace:EPI_BPM.ViewModel" 
+             d:DataContext="{d:DesignInstance Type=viewmodel:SettingScreenPageViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="600">
+             d:DesignHeight="500" d:DesignWidth="700">
     <UserControl.Resources>
         <Style TargetType="{x:Type GroupBox}">
             <Setter Property="BorderBrush" Value="{StaticResource ColorOrange}"/>
@@ -19,7 +22,7 @@
         </Grid.ColumnDefinitions>
         <GroupBox Header="SQLite Setting" Foreground="DarkOrange" Grid.Column="0" Margin="5">
             <StackPanel>
-                <epicontrols:EPIFolderOpenControl Height="23" THeaderText="DB경로"  THeaderColor="White" TBColor="White" TBWidth="150"/>
+                <epicontrols:EPIFolderOpenControl ItemText="{Binding DBPath,Mode=TwoWay}" Height="23" THeaderText="DB경로"  THeaderColor="White" TBColor="White" TBWidth="200"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="기타" Foreground="DarkOrange" Grid.Column="1" Margin="5">

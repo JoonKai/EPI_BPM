@@ -1,4 +1,5 @@
 ﻿using EPI_BPM.Commands;
+using EPI_BPM.View.Screen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +24,7 @@ namespace EPI_BPM.ViewModel
 
         private void ShowSetting(object obj)
         {
-            //var mainWindow = (EPIMainWindow)obj;
-
             SettingWindow settingView = new SettingWindow();
-            //settingView.Owner = mainWindow;
-            settingView.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             settingView.ShowDialog();
 
         }

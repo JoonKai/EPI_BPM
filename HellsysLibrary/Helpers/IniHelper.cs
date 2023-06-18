@@ -11,12 +11,25 @@ namespace HellsysLibrary.Helpers
         [DllImport("kernel32.dll")]
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
 
-        private string savePath { get => AppDomain.CurrentDomain.BaseDirectory + "\\settings.ini"; }
+        string savePath = null;
+        private string SavePath 
+        {
+            get
+            {
+                if (savePath == null)
+                    return @AppDomain.CurrentDomain.BaseDirectory + "\\settings.ini";
+                else
+                    return @AppDomain.CurrentDomain.BaseDirectory + savePath;
+            }
+        }
+
+
+
 
         public string Read(string section, string key)
         {
             StringBuilder temp = new StringBuilder(255);
-            int i = GetPrivateProfileString(section, key, "", temp, 255, savePath);
+            int i = GetPrivateProfileString(section, key, "", temp, 255, SavePath);
             return temp.ToString().Trim();
         }
         public string Read(string section, string key, string init_val)
@@ -39,7 +52,7 @@ namespace HellsysLibrary.Helpers
 
             try
             {
-                WritePrivateProfileString(section, key, val, savePath);
+                WritePrivateProfileString(section, key, val, SavePath);
                 strError = null;
 
                 return strError;
@@ -50,6 +63,12 @@ namespace HellsysLibrary.Helpers
 
                 return strError;
             }
+        }
+        public void Write(string filename,string section, string key, string val)
+        {
+            savePath = filename;
+            Write(section, key, val);
+            
         }
     }
 }
