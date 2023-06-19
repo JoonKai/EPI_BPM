@@ -22,10 +22,6 @@ namespace HellsysLibrary.Helpers
                     return @AppDomain.CurrentDomain.BaseDirectory + savePath;
             }
         }
-
-
-
-
         public string Read(string section, string key)
         {
             StringBuilder temp = new StringBuilder(255);

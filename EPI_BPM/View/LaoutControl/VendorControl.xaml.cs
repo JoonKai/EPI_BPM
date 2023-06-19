@@ -53,7 +53,7 @@ namespace EPI_BPM.View.LaoutControl
 
         private void vendorRefresh_Click(object sender, RoutedEventArgs e)
         {
-
+            Helper.EPILog.LogWrite("오늘도 힘들다.",LogType.Debug);
         }
 
         private void idTextBox_TextChanged(object sender, TextChangedEventArgs e)
