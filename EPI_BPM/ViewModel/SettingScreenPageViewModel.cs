@@ -1,4 +1,5 @@
 ﻿using EPI_BPM.Commands;
+using EPI_BPM.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,14 @@ namespace EPI_BPM.ViewModel
 {
     public class SettingScreenPageViewModel : ViewModelBase
     {
-        string dbPath = "석이";
+        DatabaseSettingItem dbsetting = new DatabaseSettingItem();
         public string DBPath 
         {
-            get
-            {
-                return dbPath;
-            }
+            get => dbsetting.DBPath;
             set
             {
-                dbPath = value;
+                dbsetting.DBPath = value;
                 OnPropertyChanged(nameof(DBPath));
-                MessageBox.Show("시작");
             }
         }
         public ICommand saveCommand => new RelayCommand<string>(SaveIni);

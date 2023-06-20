@@ -22,7 +22,7 @@
         </Grid.ColumnDefinitions>
         <GroupBox Header="SQLite Setting" Foreground="DarkOrange" Grid.Column="0" Margin="5">
             <StackPanel>
-                <epicontrols:EPIFolderOpenControl ItemText="{Binding DBPath,Mode=TwoWay}" Height="23" THeaderText="DB경로"  THeaderColor="White" TBColor="White" TBWidth="200"/>
+                <epicontrols:EPIFolderOpenControl ItemText="{Binding DBPath, UpdateSourceTrigger=PropertyChanged}" Height="23" THeaderText="DB경로"  THeaderColor="White" TBColor="White" TBWidth="200"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="기타" Foreground="DarkOrange" Grid.Column="1" Margin="5">
