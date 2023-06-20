@@ -14,8 +14,6 @@ namespace EPI_BPM.View.Screen
         public MainPage()
         {
             InitializeComponent();
-            MainPageViewModel viewModel = new MainPageViewModel();
-            this.DataContext = viewModel;
         }
 
 

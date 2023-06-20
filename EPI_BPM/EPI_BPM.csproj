@@ -69,6 +69,12 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -132,10 +138,12 @@
     <Compile Include="Model\Currency.cs" />
     <Compile Include="Model\DatabaseSettingItem.cs" />
     <Compile Include="Model\PMCategory.cs" />
-    <Compile Include="SettingWindow.xaml.cs">
-      <DependentUpon>SettingWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Service\IViewService.cs" />
+    <Compile Include="Service\ViewService.cs" />
     <Compile Include="Selector\SchedulerSelector.cs" />
+    <Compile Include="ViewModel\EPIMainViewModel.cs" />
+    <Compile Include="ViewModel\EPISettingViewModel.cs" />
+    <Compile Include="ViewModel\IParameterReceiver.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\MeasurementViewModel.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
@@ -143,6 +151,9 @@
     <Compile Include="ViewModel\SettingScreenPageViewModel.cs" />
     <Compile Include="ViewModel\VendorControlViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\EPIMainView.xaml.cs">
+      <DependentUpon>EPIMainView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LaoutControl\DataBaseControl.xaml.cs">
       <DependentUpon>DataBaseControl.xaml</DependentUpon>
     </Compile>
@@ -187,28 +198,23 @@
     <Compile Include="View\Screen\VendorAndPartsPage.xaml.cs">
       <DependentUpon>VendorAndPartsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\EPISettingVIew.xaml.cs">
+      <DependentUpon>EPISettingVIew.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowMaximizeManager.cs" />
-    <Page Include="EPIMainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EPIMainWindow.xaml.cs">
-      <DependentUpon>EPIMainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="SettingWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Styles\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\ControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EPIMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -265,6 +271,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Screen\VendorAndPartsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EPISettingVIew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

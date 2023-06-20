@@ -9,18 +9,12 @@ using System.Windows.Input;
 
 namespace EPI_BPM.ViewModel
 {
-    public class MainPageViewModel
+    public class EPIMainViewModel : ViewModelBase
     {
-        public ICommand ShowEPISettingViewCommand => new RelayCommand<object>(ShowSettingView);
         private readonly IViewService _viewService;
-
-        public MainPageViewModel()
+        public EPIMainViewModel(IViewService viewService)
         {
-            
-        }
-        private void ShowSettingView(object obj)
-        {
-            _viewService.ShowSettingView();
+            _viewService = viewService;
         }
     }
 }

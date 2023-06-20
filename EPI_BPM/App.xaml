@@ -1,8 +1,7 @@
 ﻿<Application x:Class="EPI_BPM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:EPI_BPM"
-             StartupUri="EPIMainWindow.xaml">
+             xmlns:local="clr-namespace:EPI_BPM">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
