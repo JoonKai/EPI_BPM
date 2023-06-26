@@ -13,7 +13,7 @@ namespace EPI_BPM
     public partial class App : Application
     {
         private IServiceProvider _services=null;
-        //
+        //...
         public App()
         {
             _services = ConfigurationService();
