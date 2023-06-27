@@ -37,7 +37,6 @@ namespace EPI_BPM
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
             var viewService = (IViewService)_services.GetService(typeof(IViewService));
             viewService.ShowMainView();
         }

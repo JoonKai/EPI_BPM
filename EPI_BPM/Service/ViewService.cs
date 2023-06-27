@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace EPI_BPM.Service
 {
@@ -32,6 +33,13 @@ namespace EPI_BPM.Service
             view.DataContext = viewModel;
             view.Show();
 
+        }
+        public void ShowUserControl<TView, TViewModel>(object parameter = null)
+            where TView : UserControl
+            where TViewModel : INotifyPropertyChanged
+        {
+            var viewModel = (INotifyPropertyChanged)_serviceProvider.GetService(typeof(TViewModel));
+            var view = (UserControl)_serviceProvider.GetService(typeof(TView));
         }
         public void ShowMainView()
         {
@@ -60,5 +68,7 @@ namespace EPI_BPM.Service
                 return false;
             }
         }
+
+        
     }
 }
