@@ -9,6 +9,9 @@ using System.Windows.Controls;
 
 namespace EPI_BPM.Selector
 {
+    /// <summary>
+    /// 조건에 따라 데이터 템플릿 변경
+    /// </summary>
     public class SchedulerSelector : DataTemplateSelector
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)

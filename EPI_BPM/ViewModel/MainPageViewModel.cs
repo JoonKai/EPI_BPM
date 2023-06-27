@@ -11,16 +11,16 @@ namespace EPI_BPM.ViewModel
 {
     public class MainPageViewModel
     {
-        public ICommand ShowEPISettingViewCommand => new RelayCommand<object>(ShowSettingView);
+        //public ICommand ShowEPISettingViewCommand => new RelayCommand<object>(ShowSettingView);
         private readonly IViewService _viewService;
 
         public MainPageViewModel()
         {
             
         }
-        private void ShowSettingView(object obj)
-        {
-            _viewService.ShowSettingView();
-        }
+        //private void ShowSettingView(object obj)
+        //{
+        //    _viewService.ShowSettingView();
+        //}
     }
 }
